@@ -7590,3 +7590,29 @@ section[id] {
     transition: none !important;
   }
 }
+
+/* Hero final: título ligeiramente menor sem perder a hierarquia. */
+@media (min-width: 1041px) {
+  .hero h1 {
+    max-width: 780px;
+    font-size: 4.35rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1040px) {
+  .hero h1 {
+    font-size: clamp(2.9rem, 6vw, 3.65rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: clamp(2.25rem, 10.5vw, 2.6rem);
+  }
+}
+
+@media (max-width: 370px) {
+  .hero h1 {
+    font-size: clamp(2.12rem, 10.2vw, 2.28rem);
+  }
+}

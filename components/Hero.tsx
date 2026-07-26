@@ -36,6 +36,10 @@ export function Hero() {
       });
     };
 
+    const resumeWhenVisible = () => {
+      if (!document.hidden) startPlayback();
+    };
+
     startPlayback();
 
     if (video.readyState >= 2) {
@@ -48,6 +52,7 @@ export function Hero() {
 
     video.addEventListener("loadedmetadata", startPlayback);
     video.addEventListener("canplay", startPlayback);
+    document.addEventListener("visibilitychange", resumeWhenVisible);
 
     return () => {
       video.removeEventListener("loadeddata", markReady);
@@ -55,6 +60,7 @@ export function Hero() {
       video.removeEventListener("error", markReady);
       video.removeEventListener("loadedmetadata", startPlayback);
       video.removeEventListener("canplay", startPlayback);
+      document.removeEventListener("visibilitychange", resumeWhenVisible);
     };
   }, []);
 
