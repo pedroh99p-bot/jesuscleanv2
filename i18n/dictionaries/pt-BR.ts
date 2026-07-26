@@ -608,6 +608,31 @@ export const ptBR = {
     message:
       "Olá, Jesus Clean! Quero enviar fotos e solicitar um pré-orçamento.",
   },
+  assistant: {
+    landmarkLabel: "Assistente de agendamento Jesus Clean",
+    launcherTitle: "Agendamento direto",
+    launcherSubtitle: "Jesus Clean orienta você",
+    open: "Abrir assistente de agendamento",
+    close: "Fechar assistente de agendamento",
+    title: "Jesus Clean responde",
+    subtitle: "Assistente de agendamento",
+    notice: "Orientação simples para organizar seu pedido.",
+    greeting:
+      "Olá! 👋 Vou preparar seu pedido em 5 passos rápidos. No final, você envia tudo organizado pelo WhatsApp.",
+    step: "ETAPA {current} DE {total}",
+    helper: "Toque em uma opção para continuar.",
+    back: "Voltar",
+    restart: "Refazer",
+    resultEyebrow: "TUDO CERTO",
+    resultTitle: "Seu pedido está organizado!",
+    resultText:
+      "Confira o resumo e envie pelo WhatsApp. Depois, é só acrescentar as fotos das peças.",
+    send: "AGENDAR PELO WHATSAPP",
+    whatsappIntro:
+      "👋 *OLÁ, JESUS CLEAN!* Quero solicitar um agendamento de higienização.",
+    whatsappOutro:
+      "Vou anexar fotos das peças para a avaliação e aguardo a confirmação da disponibilidade.",
+  },
   consent: {
     eyebrow: "Privacidade",
     title: "Você controla os cookies.",

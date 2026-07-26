@@ -213,7 +213,12 @@ export function Quiz() {
               <div className="quiz-result__summary">
                 {quizQuestions.map((question) => (
                   <div key={question.id}>
-                    <strong>{question.question}</strong>
+                    <strong>
+                      <span aria-hidden="true">
+                        {getQuizQuestionEmoji(question.id)}
+                      </span>
+                      {question.question.replace(/[?.!]+$/, "")}
+                    </strong>
                     <span>
                       {labels[question.id as QuizQuestionId] ?? t.quiz.notInformed}
                     </span>

@@ -656,6 +656,31 @@ export const es = {
     message:
       "¡Hola, Jesus Clean! Quiero enviar fotos y solicitar un prepresupuesto.",
   },
+  assistant: {
+    landmarkLabel: "Asistente de agenda Jesus Clean",
+    launcherTitle: "Agenda directa",
+    launcherSubtitle: "Jesus Clean te orienta",
+    open: "Abrir asistente de agenda",
+    close: "Cerrar asistente de agenda",
+    title: "Jesus Clean responde",
+    subtitle: "Asistente de agenda",
+    notice: "Orientación simple para organizar tu solicitud.",
+    greeting:
+      "¡Hola! 👋 Prepararé tu solicitud en 5 pasos rápidos. Al final, podrás enviar todo organizado por WhatsApp.",
+    step: "PASO {current} DE {total}",
+    helper: "Toca una opción para continuar.",
+    back: "Volver",
+    restart: "Empezar de nuevo",
+    resultEyebrow: "TODO LISTO",
+    resultTitle: "¡Tu solicitud está organizada!",
+    resultText:
+      "Revisa el resumen y envíalo por WhatsApp. Después, agrega fotos de las piezas.",
+    send: "AGENDAR POR WHATSAPP",
+    whatsappIntro:
+      "👋 *¡HOLA, JESUS CLEAN!* Quiero agendar una higienización de tapizados.",
+    whatsappOutro:
+      "Adjuntaré fotos para la evaluación y esperaré la confirmación de disponibilidad.",
+  },
   consent: {
     ...ptBR.consent,
     eyebrow: "Privacidad",

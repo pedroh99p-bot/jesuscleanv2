@@ -657,6 +657,31 @@ export const en = {
     message:
       "Hi, Jesus Clean! I would like to send photos and request a pre-quote.",
   },
+  assistant: {
+    landmarkLabel: "Jesus Clean scheduling assistant",
+    launcherTitle: "Quick scheduling",
+    launcherSubtitle: "Jesus Clean guides you",
+    open: "Open scheduling assistant",
+    close: "Close scheduling assistant",
+    title: "Jesus Clean replies",
+    subtitle: "Scheduling assistant",
+    notice: "Simple guidance to organize your request.",
+    greeting:
+      "Hi! 👋 I will prepare your request in 5 quick steps. At the end, you can send everything organized through WhatsApp.",
+    step: "STEP {current} OF {total}",
+    helper: "Tap an option to continue.",
+    back: "Back",
+    restart: "Start over",
+    resultEyebrow: "ALL SET",
+    resultTitle: "Your request is organized!",
+    resultText:
+      "Review the summary and send it through WhatsApp. Then attach photos of the items.",
+    send: "SCHEDULE ON WHATSAPP",
+    whatsappIntro:
+      "👋 *HI, JESUS CLEAN!* I would like to schedule an upholstery cleaning.",
+    whatsappOutro:
+      "I will attach photos for assessment and wait for availability confirmation.",
+  },
   consent: {
     ...ptBR.consent,
     eyebrow: "Privacy",

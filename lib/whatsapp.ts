@@ -1,5 +1,9 @@
 import { business } from "@/data/business";
-import type { QuizAnswerLabels } from "@/data/quiz";
+import {
+  getQuizQuestionEmoji,
+  type QuizAnswerLabels,
+  type QuizQuestionId,
+} from "@/data/quiz";
 import {
   defaultLocale,
   dictionaries,
@@ -31,6 +35,7 @@ export type WhatsAppOrigin =
   | "social_proof"
   | "location"
   | "quiz"
+  | "assistant"
   | "faq"
   | "floating"
   | "final_cta"
@@ -108,15 +113,17 @@ function buildQuizText(quizData: QuizAnswerLabels | undefined, locale: Locale) {
   if (!quizData) return "";
 
   const dictionary = dictionaries[locale];
-  const lines = [
-    [dictionary.quiz.labels.item_type, quizData.item_type],
-    [dictionary.quiz.labels.quantity, quizData.quantity],
-    [dictionary.quiz.labels.main_problem, quizData.main_problem],
-    [dictionary.quiz.labels.region, quizData.region],
-    [dictionary.quiz.labels.timing, quizData.timing],
-  ]
-    .filter((entry): entry is [string, string] => Boolean(entry[1]))
-    .map(([label, value]) => `${label}: ${value}`);
+  const lines = (
+    Object.keys(dictionary.quiz.labels) as QuizQuestionId[]
+  )
+    .map((id) => {
+      const value = quizData[id];
+      if (!value) return "";
+
+      const label = dictionary.quiz.labels[id].toLocaleUpperCase(locale);
+      return `${getQuizQuestionEmoji(id)} *${label}*\n${value}`;
+    })
+    .filter(Boolean);
 
   return lines.length
     ? `${dictionary.whatsapp.quizAnswersTitle}\n${lines.join("\n")}`

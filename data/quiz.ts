@@ -91,11 +91,18 @@ export function buildQuizWhatsAppMessage(
   t: Dictionary,
 ) {
   const lines = (Object.keys(t.quiz.labels) as QuizQuestionId[]).map((id) => {
-    const label = t.quiz.labels[id];
-    return `${label}: ${labels[id] ?? t.quiz.notInformed}`;
+    const label = t.quiz.labels[id].toLocaleUpperCase("pt-BR");
+    return `${getQuizQuestionEmoji(id)} *${label}*\n${
+      labels[id] ?? t.quiz.notInformed
+    }`;
   });
 
-  return [t.quiz.whatsappIntro, "", ...lines, "", t.quiz.whatsappOutro].join(
-    "\n",
-  );
+  return [
+    `✨ *${t.quiz.whatsappIntro.toLocaleUpperCase("pt-BR")}*`,
+    "",
+    "📋 *RESUMO DO PRÉ-ORÇAMENTO*",
+    ...lines,
+    "",
+    `📸 ${t.quiz.whatsappOutro}`,
+  ].join("\n");
 }

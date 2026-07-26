@@ -80,6 +80,8 @@ export const business = {
     logo: "/assets/brand/jesus-clean-logo.webp",
     favicon: "/assets/seo/favicon.webp",
     whatsappIcon: "/assets/icons/whatsapp-logo.webp",
+    assistantAvatar:
+      "https://res.cloudinary.com/dhbrxzt5a/image/upload/v1785036096/3ef4e6e1-de65-4c8d-9107-c9738551a9d6_1_vrulxi.png",
     pillarsImage: "/assets/pillars/four-pillars.webp",
     specialistPortrait: "/assets/specialist/igor-jesus.webp",
     socialImage:
