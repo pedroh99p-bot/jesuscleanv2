@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
-import { MessageCircle } from "lucide-react";
 import { business } from "@/data/business";
 import type { QuizAnswerLabels } from "@/data/quiz";
 import {
@@ -83,7 +83,17 @@ export function WhatsAppButton({
 
   const content = (
     <>
-      {icon ? <MessageCircle aria-hidden="true" size={20} /> : null}
+      {icon ? (
+        <Image
+          className="wa-button__icon"
+          src={business.assets.whatsappIcon}
+          alt=""
+          width={24}
+          height={24}
+          loading="eager"
+          aria-hidden="true"
+        />
+      ) : null}
       <span>{children}</span>
     </>
   );

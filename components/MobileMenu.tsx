@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { business } from "@/data/business";
 import { navigation } from "@/data/navigation";
 import { useTranslations } from "@/i18n/useTranslations";
-import { LanguageSelector } from "./LanguageSelector";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 type MobileMenuProps = {
@@ -20,12 +19,17 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
   useEffect(() => {
     if (!open) return;
 
+    const previousOverflow = document.body.style.overflow;
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
     };
 
+    document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, [open, onClose]);
 
   return (
@@ -62,10 +66,6 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             </a>
           ))}
         </nav>
-        <div className="mobile-menu__languages">
-          <span>{t.languages.serviceLabel}</span>
-          <LanguageSelector />
-        </div>
         <WhatsAppButton
           origin="hero"
           section="mobile-menu"

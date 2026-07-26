@@ -52,8 +52,8 @@ Os CTAs de WhatsApp ficam desabilitados até a configuração do número oficial
 
 ## 5. Assets baixados
 
-Foram incorporados sete arquivos oficiais fornecidos e dois pôsteres WebP derivados
-dos vídeos, totalizando nove assets locais de mídia. As fontes e validações estão em
+Foram incorporados oito arquivos oficiais fornecidos e dois pôsteres WebP derivados
+dos vídeos, totalizando dez assets locais de mídia. As fontes e validações estão em
 `public/assets/ASSET_SOURCES.md`.
 
 ## 6. Caminho local de cada asset
@@ -69,6 +69,7 @@ dos vídeos, totalizando nove assets locais de mídia. As fontes e validações 
 | Igor Jesus | `public/assets/specialist/igor-jesus.webp` |
 | Preview do WhatsApp | `public/assets/seo/whatsapp-share.webp` |
 | Favicon | `public/assets/seo/favicon.webp` |
+| Ícone do WhatsApp | `public/assets/icons/whatsapp-logo.webp` |
 
 ## 7. Peso de cada asset
 
@@ -83,6 +84,7 @@ dos vídeos, totalizando nove assets locais de mídia. As fontes e validações 
 | `igor-jesus.webp` | 136.408 bytes |
 | `whatsapp-share.webp` | 154.032 bytes |
 | `favicon.webp` | 127.504 bytes |
+| `whatsapp-logo.webp` | 124.334 bytes |
 
 ## 8. Otimizações realizadas
 

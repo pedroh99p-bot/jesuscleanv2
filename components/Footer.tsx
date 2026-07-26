@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Camera, MapPin, MessageCircle } from "lucide-react";
+import { Camera, MapPin } from "lucide-react";
 import { business } from "@/data/business";
 import { navigation } from "@/data/navigation";
 import { useTranslations } from "@/i18n/useTranslations";
@@ -37,10 +37,8 @@ export function Footer() {
               section="rodape"
               ctaId="footer-whatsapp"
               variant="ghost"
-              icon={false}
               message={t.footer.whatsappMessage}
             >
-              <MessageCircle aria-hidden="true" />
               {t.common.whatsapp}
             </WhatsAppButton>
             {business.instagramUrl ? (

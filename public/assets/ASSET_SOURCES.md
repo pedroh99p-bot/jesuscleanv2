@@ -13,6 +13,7 @@ Todos os arquivos abaixo foram baixados em 25/07/2026, responderam com HTTP 200,
 | Igor Jesus | `/assets/specialist/igor-jesus.webp` | `https://res.cloudinary.com/dhbrxzt5a/image/upload/v1785026817/9023f2f6-fed8-4abf-88df-be9d6e74f7a4_qv5srp.webp` | WebP, 1122×1402, RGB; 136.408 bytes |
 | Preview para WhatsApp e redes sociais | `/assets/seo/whatsapp-share.webp` | `https://res.cloudinary.com/dhbrxzt5a/image/upload/v1785030927/df70ace0-167a-43cf-b250-995b40858469_w8wvwv.webp` | WebP, 1731×909, RGB; 154.032 bytes |
 | Favicon | `/assets/seo/favicon.webp` | `https://res.cloudinary.com/dhbrxzt5a/image/upload/v1785031026/7682bd58-28c1-4e58-bb45-a5ec6fe7e3b0_1_dbtjc4.webp` | WebP, 1080×1080, RGBA; 127.504 bytes |
+| Ícone do WhatsApp | `/assets/icons/whatsapp-logo.webp` | `https://res.cloudinary.com/dhbrxzt5a/image/upload/v1784740034/whatsapp-logo-png_iyyy0e.webp` | WebP, 4096×4070, RGBA; 124.334 bytes |
 
 ## Observações
 

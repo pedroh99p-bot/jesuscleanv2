@@ -79,6 +79,7 @@ export const business = {
     introPoster: "/assets/video/jesus-clean-introduction-poster.webp",
     logo: "/assets/brand/jesus-clean-logo.webp",
     favicon: "/assets/seo/favicon.webp",
+    whatsappIcon: "/assets/icons/whatsapp-logo.webp",
     pillarsImage: "/assets/pillars/four-pillars.webp",
     specialistPortrait: "/assets/specialist/igor-jesus.webp",
     socialImage:

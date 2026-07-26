@@ -7494,3 +7494,99 @@ section[id] {
     scroll-behavior: auto !important;
   }
 }
+
+/* Acabamento final: WhatsApp vivo e menu mobile acelerado por transform. */
+.wa-button--primary,
+.wa-button--soft,
+.wa-button--ghost,
+.wa-button--disabled {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+  background: linear-gradient(135deg, #29df70 0%, #25d366 46%, #18b957 100%) !important;
+  box-shadow:
+    0 16px 34px rgba(37, 211, 102, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32) !important;
+  filter: none !important;
+  opacity: 1;
+}
+
+.wa-button:not(.wa-button--disabled):hover,
+.wa-button:not(.wa-button--disabled):focus-visible {
+  border-color: rgba(255, 255, 255, 0.62) !important;
+  background: linear-gradient(135deg, #22d968 0%, #20c95f 52%, #129e49 100%) !important;
+  box-shadow:
+    0 20px 42px rgba(37, 211, 102, 0.42),
+    0 0 0 4px rgba(37, 211, 102, 0.16) !important;
+}
+
+.wa-button__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(3, 72, 31, 0.18));
+}
+
+.mobile-overlay {
+  background: rgba(1, 9, 17, 0.52);
+  transition: opacity 170ms ease-out;
+}
+
+.mobile-menu {
+  right: 0;
+  width: min(88vw, 360px);
+  max-width: min(88vw, 360px);
+  padding-right: 18px;
+  padding-left: 18px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(102%, 0, 0);
+  transition:
+    transform 190ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 150ms ease-out,
+    visibility 0s linear 190ms;
+  contain: layout paint;
+  will-change: transform, opacity;
+}
+
+.mobile-menu--open {
+  right: 0;
+  width: min(88vw, 360px);
+  max-width: min(88vw, 360px);
+  padding-right: 18px;
+  padding-left: 18px;
+  overflow-y: auto;
+  pointer-events: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 190ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 150ms ease-out,
+    visibility 0s;
+}
+
+.mobile-menu__cta {
+  margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .floating-wa .wa-button__icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-menu,
+  .mobile-menu--open,
+  .mobile-overlay {
+    transition: none !important;
+  }
+}
