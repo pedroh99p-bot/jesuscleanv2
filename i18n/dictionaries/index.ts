@@ -13,7 +13,7 @@ export type Locale = keyof typeof dictionaries;
 export type { Dictionary };
 
 export const defaultLocale: Locale = "pt-BR";
-export const localeStorageKey = "altinha_locale";
+export const localeStorageKey = "jesusclean_locale";
 
 export const localeOptions = [
   { locale: "pt-BR", flag: "br" },

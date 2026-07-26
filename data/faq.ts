@@ -1,60 +1,62 @@
 export const faqItems = [
   {
-    id: "preciso-saber-jogar",
-    question: "Preciso já saber jogar?",
+    id: "duracao-higienizacao",
+    question: "Quanto tempo leva a higienização?",
     answer:
-      "Não. A aula atende desde quem nunca jogou até quem já pratica e quer evoluir tecnicamente.",
+      "O tempo varia conforme o tipo, o tamanho e o estado das peças. A estimativa é informada após a avaliação por fotos e confirmada no agendamento.",
   },
   {
-    id: "posso-ir-sozinho",
-    question: "Posso ir sozinho?",
+    id: "tempo-secagem",
+    question: "Quanto tempo o estofado demora para secar?",
     answer:
-      "Pode. O contato pelo WhatsApp ajuda a entender seu momento e orientar a melhor forma de começar.",
+      "A secagem depende do tecido, da ventilação, do clima e do nível de umidade. A orientação específica é passada ao final do atendimento.",
   },
   {
-    id: "preciso-levar-bola",
-    question: "Preciso levar bola?",
+    id: "remove-manchas",
+    question: "A higienização remove todas as manchas?",
     answer:
-      "A aula inclui orientação e materiais utilizados na experiência. Se houver alguma necessidade específica, ela é confirmada no contato.",
+      "Não é possível prometer remoção total. O resultado varia conforme o tecido, a origem da mancha, o tempo e os produtos usados anteriormente.",
   },
   {
-    id: "o-que-vestir",
-    question: "O que devo vestir?",
+    id: "reduz-odores",
+    question: "O processo ajuda a reduzir odores?",
     answer:
-      "Use roupa de praia confortável e proteção para o sol, como protetor solar.",
+      "A higienização profunda pode ajudar a reduzir odores relacionados a resíduos e sujeiras. A resposta varia conforme a origem e a permanência do odor.",
   },
   {
-    id: "quanto-tempo-dura",
-    question: "Quanto tempo dura a aula?",
-    answer: "A duração média é de aproximadamente uma hora.",
-  },
-  {
-    id: "onde-acontece",
-    question: "Onde acontece?",
+    id: "tipos-atendidos",
+    question: "Quais tipos de estofado são atendidos?",
     answer:
-      "As aulas acontecem na Praia do Pontal, no Recreio dos Bandeirantes, região do Posto 12. O ponto exato é confirmado pelo WhatsApp.",
+      "Sofás, colchões, poltronas, cadeiras, tapetes, bancos automotivos e itens infantis estão entre as soluções. A equipe confirma a viabilidade de cada peça na avaliação.",
   },
   {
-    id: "periodos",
-    question: "Quais períodos estão disponíveis?",
+    id: "retirar-sofa",
+    question: "É necessário retirar o sofá do lugar?",
     answer:
-      "Os horários são prioritariamente cedo e no fim da tarde. A disponibilidade real é confirmada no contato.",
+      "O serviço é realizado no local. Antes do atendimento, a equipe orienta sobre o espaço necessário e qualquer preparação do ambiente.",
   },
   {
-    id: "valor",
-    question: "Como descubro o valor?",
+    id: "pre-orcamento-foto",
+    question: "Como funciona o pré-orçamento por foto?",
     answer:
-      "As opções e condições são informadas no contato pelo WhatsApp, de acordo com o formato mais adequado.",
+      "Você envia fotos, quantidade de peças, tipo de tecido quando souber, principal problema e localização. A equipe avalia as informações antes de confirmar condições e agenda.",
   },
   {
-    id: "idiomas",
-    question: "Há atendimento em outros idiomas?",
-    answer: "Sim. O atendimento pode ser feito em português, inglês e espanhol.",
+    id: "empresas-condominios",
+    question: "A Jesus Clean atende empresas e condomínios?",
+    answer:
+      "A página prevê atendimento residencial e comercial. O escopo, acesso ao local e quantidade de peças precisam ser confirmados previamente.",
+  },
+  {
+    id: "regioes",
+    question: "Quais regiões são atendidas?",
+    answer:
+      "O atendimento abrange diversas regiões do Rio de Janeiro. Zona Sul, Norte, Oeste, Centro, Barra, Recreio, Tijuca, Méier, Baixada e entorno estão sujeitos à confirmação de disponibilidade.",
   },
   {
     id: "agendar",
-    question: "Como faço para agendar?",
+    question: "Como agendar o serviço?",
     answer:
-      "Chame pelo WhatsApp, conte seu nível e objetivo, e receba a orientação para combinar a primeira aula.",
+      "Envie fotos e os dados básicos pelo WhatsApp. Depois da avaliação inicial, a equipe informa as condições e as opções de data disponíveis.",
   },
 ] as const;

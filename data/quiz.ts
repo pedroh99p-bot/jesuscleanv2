@@ -1,16 +1,15 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 
 export type QuizQuestionId =
-  | "level"
-  | "goal"
-  | "format"
-  | "period"
-  | "concern";
+  | "item_type"
+  | "quantity"
+  | "main_problem"
+  | "region"
+  | "timing";
 
 export type QuizOption = {
   id: string;
   label: string;
-  emoji: string;
 };
 
 export type QuizQuestion = {
@@ -41,15 +40,8 @@ export function getQuizAnswerLabels(
 }
 
 export function getQuizResult(answers: QuizAnswers, t: Dictionary) {
-  if (answers.goal === "technique" || answers.level === "technical") {
-    return t.quiz.results.technique;
-  }
-
-  if (answers.goal === "confidence" || answers.concern === "shyness") {
-    return t.quiz.results.confidence;
-  }
-
-  return t.quiz.results.zero;
+  void answers;
+  return t.quiz.results.ready;
 }
 
 export function buildQuizWhatsAppMessage(

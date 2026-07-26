@@ -1,4 +1,4 @@
-export type ClassProfileId = "zero" | "confidence" | "technique";
+export type ClassProfileId = "sofa" | "mattress" | "combo";
 
 export type ClassProfile = {
   id: ClassProfileId;
@@ -14,35 +14,35 @@ export type ClassProfile = {
 
 export const classProfiles: ClassProfile[] = [
   {
-    id: "zero",
-    emoji: "⚽",
-    titleKey: "classProfiles.profiles.zero.title",
-    descriptionKey: "classProfiles.profiles.zero.description",
-    audienceKey: "classProfiles.profiles.zero.audience",
-    ctaKey: "classProfiles.profiles.zero.cta",
-    whatsappMessageKey: "classProfiles.profiles.zero.whatsappMessage",
+    id: "sofa",
+    emoji: "01",
+    titleKey: "classProfiles.profiles.sofa.title",
+    descriptionKey: "classProfiles.profiles.sofa.description",
+    audienceKey: "classProfiles.profiles.sofa.audience",
+    ctaKey: "classProfiles.profiles.sofa.cta",
+    whatsappMessageKey: "classProfiles.profiles.sofa.whatsappMessage",
     order: 1,
     enabled: true,
   },
   {
-    id: "confidence",
-    emoji: "💪",
-    titleKey: "classProfiles.profiles.confidence.title",
-    descriptionKey: "classProfiles.profiles.confidence.description",
-    audienceKey: "classProfiles.profiles.confidence.audience",
-    ctaKey: "classProfiles.profiles.confidence.cta",
-    whatsappMessageKey: "classProfiles.profiles.confidence.whatsappMessage",
+    id: "mattress",
+    emoji: "02",
+    titleKey: "classProfiles.profiles.mattress.title",
+    descriptionKey: "classProfiles.profiles.mattress.description",
+    audienceKey: "classProfiles.profiles.mattress.audience",
+    ctaKey: "classProfiles.profiles.mattress.cta",
+    whatsappMessageKey: "classProfiles.profiles.mattress.whatsappMessage",
     order: 2,
     enabled: true,
   },
   {
-    id: "technique",
-    emoji: "🎯",
-    titleKey: "classProfiles.profiles.technique.title",
-    descriptionKey: "classProfiles.profiles.technique.description",
-    audienceKey: "classProfiles.profiles.technique.audience",
-    ctaKey: "classProfiles.profiles.technique.cta",
-    whatsappMessageKey: "classProfiles.profiles.technique.whatsappMessage",
+    id: "combo",
+    emoji: "03",
+    titleKey: "classProfiles.profiles.combo.title",
+    descriptionKey: "classProfiles.profiles.combo.description",
+    audienceKey: "classProfiles.profiles.combo.audience",
+    ctaKey: "classProfiles.profiles.combo.cta",
+    whatsappMessageKey: "classProfiles.profiles.combo.whatsappMessage",
     order: 3,
     enabled: true,
   },

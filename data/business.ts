@@ -1,49 +1,90 @@
+const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ?? "";
+const phone = /^55\d{10,11}$/.test(rawPhone) ? rawPhone : null;
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || null;
+const configuredInstagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() || null;
+
 export const business = {
-  name: "Altinha com Samurai",
-  siteUrl: "https://altinhacomsamurai.com.br",
-  instructor: 'Wallace "Samurai" Costa',
+  name: "Jesus Clean",
+  specialist: "Igor Jesus",
+  role: "Fundador da Jesus Clean",
   service:
-    "Aulas de altinha na praia para iniciantes, intermediários e avançados.",
-  phone: "5521983565005",
-  whatsappBase: "https://wa.me/5521983565005",
-  instagram: "https://www.instagram.com/samuraialta7/",
+    "Higienização profissional de estofados residenciais e comerciais no Rio de Janeiro.",
+  publicSiteUrl: configuredSiteUrl,
+  siteUrl: configuredSiteUrl ?? "http://localhost:3000",
+  isPublicSiteConfigured: Boolean(configuredSiteUrl),
+  phone,
+  whatsappConfigured: Boolean(phone),
+  whatsappBase: phone ? `https://wa.me/${phone}` : null,
+  whatsapp: {
+    defaultMessage:
+      "Olá, Jesus Clean! Gostaria de enviar fotos e solicitar um pré-orçamento de higienização.",
+    messages: {
+      hero:
+        "Olá, Jesus Clean! Quero avaliar meu estofado e solicitar um pré-orçamento.",
+      specialist:
+        "Olá, Igor! Conheci a Jesus Clean pelo site e gostaria de avaliar meu estofado.",
+      services:
+        "Olá, Jesus Clean! Quero saber mais sobre a higienização de estofados.",
+      infant:
+        "Olá, Jesus Clean! Quero avaliar itens infantis para higienização.",
+      location:
+        "Olá, Jesus Clean! Quero confirmar se vocês atendem minha região.",
+      final:
+        "Olá, Jesus Clean! Quero enviar fotos e solicitar um pré-orçamento.",
+    },
+  },
+  instagramHandle: "@jesus.clean",
+  instagramUrl: configuredInstagram,
   locale: {
-    beach: "Praia do Pontal",
-    reference: "próximo ao Posto 12",
-    neighborhood: "Recreio dos Bandeirantes",
     city: "Rio de Janeiro",
+    state: "RJ",
+    serviceMode: "Atendimento em domicílio",
   },
+  regions: [
+    "Zona Sul",
+    "Zona Norte",
+    "Zona Oeste",
+    "Centro",
+    "Barra e Recreio",
+    "Tijuca e Méier",
+    "Baixada e entorno sob consulta",
+  ],
   location: {
-    meetingPoint: "Praia do Pontal, região do Posto 12",
-    neighborhoodAndCity: "Recreio dos Bandeirantes, Rio de Janeiro",
-    mapQuery:
-      "Praia do Pontal Posto 12 Recreio dos Bandeirantes Rio de Janeiro",
-    mapEmbedSrc:
-      "https://www.google.com/maps?q=Praia%20do%20Pontal%20Posto%2012%20Recreio%20dos%20Bandeirantes%20Rio%20de%20Janeiro&output=embed",
-    routeUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Praia%20do%20Pontal%20Posto%2012%20Recreio%20dos%20Bandeirantes%20Rio%20de%20Janeiro",
-    exactAddress: null,
+    publicAddress: null,
+    routeUrl: null,
+    mapEmbedSrc: null,
     coordinates: null,
-    mapStatus: "approximate",
+    mapStatus: "disabled_pending_public_location",
   },
-  serviceFacts: {
-    frequency: "Aulas todos os dias",
-    schedule: "Horários prioritariamente cedo e no fim da tarde",
-    duration: "Aproximadamente uma hora",
-    levels: "Do primeiro contato ao aluno que já joga",
-    materials: "Orientação e materiais utilizados na aula",
-    languages: "Atendimento em PT, EN e ES",
+  claims: {
+    clientsServed: 900,
+    clientsServedPrefix: "+",
+    rating: 5,
+    ratingSuffix: "★",
+    coverage: 100,
+    coverageSuffix: "%",
+  },
+  urgencyCampaign: {
+    enabled: false,
+    title: "Atendimento agendado no Rio de Janeiro",
+    description:
+      "Envie fotos para receber uma avaliação inicial e consultar disponibilidade.",
+    validUntil: null,
+    cta: "Consultar disponibilidade",
   },
   assets: {
-    heroVideo:
-      "https://res.cloudinary.com/dm9mnc97u/video/upload/v1783733938/0710_1_t7jnfw.webm",
-    introVideo:
-      "https://res.cloudinary.com/dm9mnc97u/video/upload/v1776732262/VEM_CONHECER_O_ESPORTE_QUE_MAIS_CRESCE_NO_BRASIL_%EF%B8%8F_Imagens-edi%C3%A7%C3%A3o-_ronygomess__j4ikne.mp4",
-    logo: "https://res.cloudinary.com/dm9mnc97u/image/upload/v1783733963/2d5e7d16-3742-4552-947e-5abe24bfd0a3_1_gqrldy.webp",
-    communityImage:
-      "https://res.cloudinary.com/dm9mnc97u/image/upload/v1783733933/1_encontro_realizado_com_sucesso_%EF%A5%B7_Gratid%C3%A3o_aos_envolvidos_foi_tudo_lindo_demais._Que_di_1_zqd21y.webp",
-    samuraiPortrait:
-      "https://res.cloudinary.com/dm9mnc97u/image/upload/v1783734276/609711e6-455f-47c2-a92e-cdee49ab9f57_v7glsh.webp",
+    heroVideo: "/assets/hero/hero-background.mp4",
+    heroPoster: "/assets/hero/hero-poster.webp",
+    introVideo: "/assets/video/jesus-clean-introduction.mp4",
+    introPoster: "/assets/video/jesus-clean-introduction-poster.webp",
+    logo: "/assets/brand/jesus-clean-logo.webp",
+    pillarsImage: "/assets/pillars/four-pillars.webp",
+    specialistPortrait: "/assets/specialist/igor-jesus.webp",
+    socialImage: "/assets/pillars/four-pillars.webp",
+  },
+  analytics: {
+    origin: "landing_page_jesus_clean",
+    campaign: null,
   },
   privacy: {
     legalName: null,
@@ -51,7 +92,7 @@ export const business = {
     contactEmail: null,
   },
   productionCredit: {
-    name: "Montana Tech Lab",
+    name: "MONTANA",
     url: null as string | null,
   },
 } as const;

@@ -1,10 +1,11 @@
 export const navigation = [
-  { key: "experience", href: "#experiencia" },
-  { key: "quiz", href: "#quiz" },
-  { key: "specialist", href: "#especialista" },
-  { key: "practical", href: "#como-funciona" },
-  { key: "location", href: "#localizacao" },
-  { key: "faq", href: "#faq" },
+  { key: "home", href: "#top", desktop: true },
+  { key: "solutions", href: "#solucoes", desktop: true },
+  { key: "specialist", href: "#especialista", desktop: true },
+  { key: "services", href: "#servicos", desktop: true },
+  { key: "infant", href: "#infantil", desktop: false },
+  { key: "quiz", href: "#quiz", desktop: true },
+  { key: "serviceArea", href: "#atendimento", desktop: false },
 ] as const;
 
 export const serviceLanguages = ["PT", "EN", "ES"] as const;

@@ -1,21 +1,23 @@
+import { faqItems } from "@/data/faq";
+
 export const ptBR = {
   common: {
-    brand: "Altinha com Samurai",
-    brandShort: "Altinha",
-    brandSuffix: "com Samurai",
-    instructor: 'Wallace "Samurai" Costa',
-    beach: "Praia do Pontal",
-    neighborhood: "Recreio dos Bandeirantes",
-    reference: "Posto 12",
+    brand: "Jesus Clean",
+    brandShort: "Jesus Clean",
+    brandSuffix: "Higienização de estofados",
+    instructor: "Igor Jesus",
+    beach: "Rio de Janeiro",
+    neighborhood: "Atendimento em domicílio",
+    reference: "Bairros sujeitos à confirmação",
     whatsapp: "WhatsApp",
     instagram: "Instagram",
     google: "Google",
     notInformed: "Não informado",
-    production: "Produzido por Montana Tech Lab",
+    production: "Produzido por MONTANA",
   },
   languages: {
     label: "Selecionar idioma",
-    serviceLabel: "Atendimento",
+    serviceLabel: "Idioma",
     options: {
       "pt-BR": "Português do Brasil",
       en: "Inglês",
@@ -25,130 +27,131 @@ export const ptBR = {
   topbar: {
     ariaLabel: "Informações rápidas",
     items: [
-      "PT • EN • ES",
-      "Praia do Pontal",
-      "Posto 12",
-      "Aulas todos os dias",
-      "Iniciantes bem-vindos",
-      "Treino no seu ritmo",
+      "Atendimento no Rio de Janeiro",
+      "Higienização de estofados",
+      "Atendimento em domicílio",
+      "Pré-orçamento por fotos",
+      "Cuidado com cada tecido",
     ],
   },
   preloader: {
-    text: "Preparando sua experiência...",
+    text: "Preparando uma experiência mais limpa...",
   },
   navigation: {
-    experience: "A experiência",
-    quiz: "Quiz",
-    specialist: "O especialista",
-    practical: "Como funciona",
-    location: "Localização",
-    faq: "FAQ",
+    home: "Início",
+    solutions: "Soluções",
+    specialist: "Quem somos",
+    services: "Serviços",
+    infant: "Infantil",
+    quiz: "Orçamento",
+    serviceArea: "Atendimento",
   },
   header: {
     navAria: "Navegação principal",
     mobileNavAria: "Menu mobile",
     openMenu: "Abrir menu",
     closeMenu: "Fechar menu",
-    headerWhatsApp: "WhatsApp",
-    mobileWhatsApp: "Agendar pelo WhatsApp",
+    headerWhatsApp: "Pedir orçamento",
+    mobileWhatsApp: "Atendimento no WhatsApp",
     whatsappMessage:
-      "Olá, Samurai! Conheci as aulas pelo site e gostaria de saber como funciona para começar.",
+      "Olá, Jesus Clean! Quero enviar fotos e solicitar um pré-orçamento.",
   },
   hero: {
-    eyebrow: "Aulas na Praia do Pontal • Posto 12",
-    title: "Aprenda altinha com quem",
-    titleHighlight: "vive a praia.",
+    eyebrow: "Atendimento exclusivo no Rio de Janeiro",
+    title: "Seu sofá limpo, cheiroso e renovado",
+    titleHighlight: "sem sair de casa.",
     body:
-      "Aulas para quem nunca jogou, para iniciantes que querem ganhar confiança e para quem já pratica e quer evoluir na areia.",
-    primaryCta: "Agendar pelo WhatsApp",
-    secondaryCta: "Descobrir a aula ideal",
-    chipsAria: "Benefícios principais",
+      "Higienização profissional de estofados no Rio de Janeiro com atendimento agendado, cuidado com o tecido e resultado visível.",
+    primaryCta: "Atendimento no WhatsApp",
+    secondaryCta: "Fazer pré-orçamento",
+    chipsAria: "Principais soluções",
     benefits: [
-      "Iniciantes bem-vindos",
-      "Todos os níveis",
-      "Ritmo adaptado",
-      "Praia do Pontal",
+      "Higienização de estofados",
+      "Sofás e colchões",
+      "Poltronas e tapetes",
+      "Diversas regiões do RJ",
     ],
     whatsappMessage:
-      "Olá, Samurai! Conheci as aulas pelo site e gostaria de saber como funciona para começar na Praia do Pontal.",
+      "Olá, Jesus Clean! Quero avaliar meu estofado. Vou enviar fotos e minha região.",
   },
   introVideo: {
-    eyebrow: "Viva a experiência",
-    title:
-      "Conheça o esporte que transforma a energia da praia em movimento.",
+    eyebrow: "O que está escondido no seu estofado?",
+    title: "Seu estofado pode estar mais sujo do que parece",
     body:
-      "Altinha combina técnica, conexão, diversão e evolução em um cenário que faz parte da experiência.",
-    cta: "Quero fazer minha primeira aula",
+      "A limpeza comum nem sempre alcança a sujeira, os odores e os resíduos acumulados profundamente no tecido.",
+    cta: "Quero avaliar meu estofado",
     controls: "Controles do vídeo",
     pause: "Pausar vídeo",
     play: "Reproduzir vídeo",
     unmute: "Ativar som",
     mute: "Desativar som",
-    note: "Técnica, praia e movimento em uma experiência prática.",
+    note: "Veja parte do processo e o resultado em um atendimento real da marca.",
     whatsappMessage:
-      "Olá, Samurai! Vi o vídeo da experiência no site e quero fazer minha primeira aula na Praia do Pontal.",
+      "Olá, Jesus Clean! Vi o vídeo e quero avaliar meu estofado. Vou enviar fotos.",
   },
   rollers: {
     one: {
       items: [
-        "Iniciantes bem-vindos",
-        "Praia do Pontal",
-        "Todos os níveis",
-        "PT • EN • ES",
-        "Ritmo adaptado",
+        "Higienização profissional",
+        "Sofás",
+        "Colchões",
+        "Poltronas",
+        "Tapetes",
+        "Atendimento em domicílio",
+        "Orçamento pelo WhatsApp",
       ],
       label:
-        "Iniciantes bem-vindos, Praia do Pontal, Todos os níveis, PT, EN, ES, Ritmo adaptado",
+        "Higienização profissional, sofás, colchões, poltronas, tapetes, atendimento em domicílio e orçamento pelo WhatsApp",
     },
     two: {
       items: [
-        "Técnica",
-        "Confiança",
-        "Comunidade",
-        "Evolução",
-        "Energia de praia",
-        "Treino no seu ritmo",
+        "Limpeza profunda",
+        "Redução de odores",
+        "Estofado renovado",
+        "Cuidado com o tecido",
+        "Atendimento agendado",
+        "Resultado visível",
       ],
       label:
-        "Técnica, Confiança, Comunidade, Evolução, Energia de praia, Treino no seu ritmo",
+        "Limpeza profunda, redução de odores, estofado renovado, cuidado com o tecido, atendimento agendado e resultado visível",
     },
     three: {
       items: [
-        "Sua primeira aula pode começar aqui",
-        "Fale com o Samurai",
-        "Praia do Pontal",
-        "Comece no seu ritmo",
-        "Iniciantes bem-vindos",
+        "Sofá mais limpo",
+        "Casa mais confortável",
+        "Higienização profissional",
+        "Atendimento no RJ",
+        "Peça seu orçamento",
       ],
       label:
-        "Sua primeira aula pode começar aqui, Fale com o Samurai, Praia do Pontal, Comece no seu ritmo, Iniciantes bem-vindos",
+        "Sofá mais limpo, casa mais confortável, higienização profissional, atendimento no Rio de Janeiro e peça seu orçamento",
     },
   },
   quiz: {
-    eyebrow: "Pré-atendimento",
-    title: "Descubra a aula ideal para você.",
+    eyebrow: "Pré-orçamento online",
+    title: "Conte o que você precisa higienizar.",
     description:
-      "Responda em menos de um minuto e leve para o WhatsApp uma mensagem útil, com seu nível, objetivo, preferência de formato e principal dúvida.",
+      "Responda cinco perguntas rápidas. No final, a mensagem fica pronta para você acrescentar fotos e solicitar a avaliação.",
     cover: {
-      eyebrow: "Pré-atendimento",
-      title: "Descubra a aula ideal para o seu momento.",
+      eyebrow: "Avaliação inicial",
+      title: "Prepare seu pedido de pré-orçamento.",
       text:
-        "Responda algumas perguntas rápidas para o Samurai entender seu nível, objetivo e a melhor forma de começar.",
-      factsAria: "Resumo do pré-atendimento",
+        "Informe a peça, a quantidade, o principal problema, a região e o prazo desejado.",
+      factsAria: "Resumo do pré-orçamento",
       facts: [
         "5 perguntas rápidas",
-        "Leva menos de 1 minuto",
-        "Resposta personalizada",
+        "Sem cálculo automático de preço",
+        "Resumo pronto para o atendimento",
       ],
       startButton: "Começar agora",
-      progress: "perguntas antes da indicação",
+      progress: "perguntas para concluir",
     },
-    startTitle: "Comece pelo seu momento atual.",
+    startTitle: "Comece pelas informações da peça.",
     startText:
-      "Não existe resposta certa. As respostas só servem para facilitar a conversa com Samurai.",
-    startButton: "Começar quiz",
-    resultLabel: "Resultado",
-    send: "Enviar respostas ao Samurai",
+      "As respostas facilitam a avaliação, mas não substituem a análise das fotos e do tecido.",
+    startButton: "Começar pré-orçamento",
+    resultLabel: "Resumo concluído",
+    send: "Enviar dados pelo WhatsApp",
     back: "Voltar",
     restart: "Refazer",
     questionProgress: "Pergunta {current} de {total}",
@@ -159,142 +162,279 @@ export const ptBR = {
     notInformed: "Não informado",
     questions: [
       {
-        id: "level",
-        question: "Qual é o seu nível hoje?",
+        id: "item_type",
+        question: "O que você quer higienizar?",
         options: [
-          { id: "never", label: "Nunca joguei", emoji: "⚽" },
-          { id: "starting", label: "Estou começando", emoji: "🌱" },
-          { id: "practice", label: "Já pratico um pouco", emoji: "🔥" },
-          { id: "technical", label: "Quero evoluir tecnicamente", emoji: "🎯" },
+          { id: "sofa", label: "Sofá" },
+          { id: "mattress", label: "Colchão" },
+          { id: "chairs", label: "Poltronas ou cadeiras" },
+          { id: "rug", label: "Tapete" },
+          { id: "car_seat", label: "Banco automotivo" },
+          { id: "multiple", label: "Mais de uma peça" },
         ],
       },
       {
-        id: "goal",
-        question: "Qual é seu principal objetivo?",
+        id: "quantity",
+        question: "Quantas peças você deseja higienizar?",
         options: [
-          { id: "learn", label: "Aprender do zero", emoji: "🧩" },
-          { id: "confidence", label: "Jogar com mais confiança", emoji: "💪" },
-          { id: "technique", label: "Melhorar minha técnica", emoji: "📈" },
-          { id: "questions", label: "Tirar dúvidas antes de ir", emoji: "💬" },
+          { id: "one", label: "1 peça" },
+          { id: "two", label: "2 peças" },
+          { id: "three_four", label: "3 ou 4 peças" },
+          { id: "five_plus", label: "5 ou mais peças" },
         ],
       },
       {
-        id: "format",
-        question: "Como você imagina começar?",
+        id: "main_problem",
+        question: "Qual é o principal problema?",
         options: [
-          { id: "solo", label: "Sozinho", emoji: "👤" },
-          { id: "pair", label: "Com outra pessoa", emoji: "👥" },
-          { id: "group", label: "Em grupo", emoji: "🏖️" },
-          { id: "unsure", label: "Ainda não sei", emoji: "🤔" },
+          { id: "odor", label: "Mau cheiro" },
+          { id: "stains", label: "Manchas aparentes" },
+          { id: "deep_dirt", label: "Sujeira acumulada" },
+          { id: "maintenance", label: "Higienização preventiva" },
         ],
       },
       {
-        id: "period",
-        question: "Qual período costuma funcionar melhor?",
+        id: "region",
+        question: "Em qual região será o atendimento?",
         options: [
-          { id: "morning", label: "Manhã", emoji: "🌅" },
-          { id: "late_afternoon", label: "Final da tarde", emoji: "🌇" },
-          { id: "flexible", label: "Tenho flexibilidade", emoji: "🔄" },
+          { id: "south", label: "Zona Sul" },
+          { id: "north", label: "Zona Norte" },
+          { id: "west", label: "Zona Oeste, Barra ou Recreio" },
+          { id: "center", label: "Centro, Tijuca ou Méier" },
+          { id: "other", label: "Baixada ou outra região" },
         ],
       },
       {
-        id: "concern",
-        question: "O que mais gera dúvida ou insegurança?",
+        id: "timing",
+        question: "Para quando você precisa do atendimento?",
         options: [
-          { id: "pace", label: "Não conseguir acompanhar", emoji: "⚡" },
-          { id: "shyness", label: "Vergonha de começar", emoji: "😅" },
-          { id: "technique_gap", label: "Falta de técnica", emoji: "🧠" },
-          { id: "how", label: "Quero entender como funciona", emoji: "💬" },
+          { id: "asap", label: "O quanto antes" },
+          { id: "this_week", label: "Ainda esta semana" },
+          { id: "next_week", label: "Na próxima semana" },
+          { id: "researching", label: "Estou pesquisando" },
         ],
       },
     ],
     labels: {
-      level: "Meu nível",
-      goal: "Meu objetivo",
-      format: "Prefiro começar",
-      period: "Melhor período",
-      concern: "Minha principal dúvida",
+      item_type: "Tipo de peça",
+      quantity: "Quantidade",
+      main_problem: "Problema principal",
+      region: "Região",
+      timing: "Prazo desejado",
     },
     results: {
-      technique: {
-        title: "Você parece pronto para uma aula com foco técnico.",
+      ready: {
+        title: "Seu pré-orçamento está quase pronto",
         text:
-          "A ideia é observar seu jogo atual e ajustar fundamentos como toque, postura, controle e leitura da roda.",
-        recommendedProfile: "Evoluir a técnica",
-      },
-      confidence: {
-        title: "Ganhar confiança pode deixar sua entrada na roda mais leve.",
-        text:
-          "O treino ajuda você a criar repertório, entender o ritmo da bola e praticar com mais segurança.",
-        recommendedProfile: "Ganhar confiança",
-      },
-      zero: {
-        title: "Você pode começar com uma aula adaptada ao seu momento.",
-        text:
-          "Mesmo sem experiência, a aula organiza o básico para você ganhar confiança, entender a bola e evoluir na areia.",
-        recommendedProfile: "Começar do zero",
+          "Envie este resumo e acrescente algumas fotos para a Jesus Clean avaliar sua peça.",
+        recommendedProfile: "Pré-orçamento por fotos",
       },
     },
-    whatsappIntro: "Olá, Samurai! Fiz o pré-atendimento pelo site.",
-    whatsappOutro: "Gostaria de entender como funcionam as aulas.",
+    whatsappIntro: "Olá, Jesus Clean! Fiz o pré-orçamento inicial pelo site.",
+    whatsappOutro:
+      "Vou anexar fotos das peças para vocês avaliarem. Sei que o valor final depende da análise.",
+  },
+  problems: {
+    eyebrow: "Soluções para o dia a dia",
+    title: "Quando a limpeza comum não é suficiente.",
+    text:
+      "A avaliação considera o tecido, o tempo e o tipo de sujeira antes de indicar o procedimento.",
+    items: [
+      {
+        title: "Mau cheiro no sofá",
+        text:
+          "Higienização profunda para ajudar a reduzir odores e deixar o ambiente mais agradável.",
+        cta: "Resolver no WhatsApp",
+        message:
+          "Olá, Jesus Clean! Meu sofá está com mau cheiro e quero enviar fotos para avaliação.",
+      },
+      {
+        title: "Manchas aparentes",
+        text:
+          "Avaliação do tecido e limpeza técnica para melhorar o aspecto do estofado.",
+        cta: "Avaliar minha peça",
+        message:
+          "Olá, Jesus Clean! Minha peça tem manchas aparentes e quero enviar fotos para avaliação.",
+      },
+      {
+        title: "Sujeira acumulada",
+        text:
+          "Processo focado em deixar o estofado mais limpo e confortável para a família.",
+        cta: "Quero higienizar",
+        message:
+          "Olá, Jesus Clean! Quero avaliar uma peça com sujeira acumulada.",
+      },
+      {
+        title: "Aparência envelhecida",
+        text:
+          "Limpeza especializada para renovar o visual e melhorar a aparência da peça.",
+        cta: "Pedir orçamento",
+        message:
+          "Olá, Jesus Clean! Quero avaliar uma peça com aparência envelhecida.",
+      },
+    ],
+    disclaimer:
+      "O resultado varia conforme tecido, tempo, origem e tipo de sujeira. Não há promessa de remoção total.",
+  },
+  services: {
+    eyebrow: "Serviços",
+    title: "Soluções para diferentes peças e ambientes.",
+    text:
+      "Sem fotos específicas publicadas, os cards usam ícones e informação objetiva — nunca imagens genéricas.",
+    cards: [
+      {
+        id: "sofas",
+        title: "Higienização de sofás",
+        description: "Avaliação do tecido e limpeza técnica realizada no local.",
+        benefit: "Ajuda a reduzir sujeiras e odores e melhora o aspecto.",
+        cta: "Avaliar meu sofá",
+        message:
+          "Olá, Jesus Clean! Quero avaliar um sofá. Vou enviar fotos, quantidade de lugares e minha região.",
+      },
+      {
+        id: "colchoes",
+        title: "Higienização de colchões",
+        description: "Processo direcionado ao tecido e às condições da peça.",
+        benefit: "Contribui para uma superfície mais limpa e confortável.",
+        cta: "Avaliar meu colchão",
+        message:
+          "Olá, Jesus Clean! Quero avaliar um colchão. Vou enviar fotos, tamanho e minha região.",
+      },
+      {
+        id: "poltronas-cadeiras",
+        title: "Poltronas e cadeiras",
+        description: "Atendimento para peças avulsas ou conjuntos.",
+        benefit: "Cuidado com detalhes, costuras e áreas de maior uso.",
+        cta: "Avaliar minhas peças",
+        message:
+          "Olá, Jesus Clean! Quero avaliar poltronas ou cadeiras. Vou enviar fotos e quantidades.",
+      },
+      {
+        id: "tapetes",
+        title: "Tapetes",
+        description: "Avaliação prévia do material, tamanho e estado atual.",
+        benefit: "Limpeza orientada ao tipo de fibra e ao uso do ambiente.",
+        cta: "Avaliar meu tapete",
+        message:
+          "Olá, Jesus Clean! Quero avaliar um tapete. Vou enviar fotos e medidas aproximadas.",
+      },
+      {
+        id: "automotivos",
+        title: "Bancos automotivos",
+        description: "Higienização de bancos e superfícies estofadas do veículo.",
+        benefit: "Ajuda a renovar o interior e reduzir resíduos acumulados.",
+        cta: "Avaliar meu veículo",
+        message:
+          "Olá, Jesus Clean! Quero avaliar bancos automotivos. Vou enviar fotos e o modelo do veículo.",
+      },
+      {
+        id: "multiplas-pecas",
+        title: "Mais de uma peça",
+        description: "Avaliação conjunta para diferentes tipos de estofado.",
+        benefit: "Organiza o atendimento conforme a combinação de peças.",
+        cta: "Avaliar um conjunto",
+        message:
+          "Olá, Jesus Clean! Quero avaliar mais de uma peça. Vou enviar fotos e quantidades.",
+      },
+      {
+        id: "residencial-comercial",
+        title: "Residencial e comercial",
+        description: "Atendimento agendado em casas, empresas e condomínios.",
+        benefit: "Escopo e acesso ao local alinhados antes do agendamento.",
+        cta: "Consultar atendimento",
+        message:
+          "Olá, Jesus Clean! Quero consultar um atendimento residencial ou comercial.",
+      },
+    ],
+  },
+  infant: {
+    eyebrow: "Cuidado para a rotina da família",
+    title: "Higienização especial para itens de bebê e criança",
+    text:
+      "Carrinhos, bebê conforto, cadeirinhas, colchões infantis, tapetes e outros estofados acumulam resíduos e odores no dia a dia. A avaliação considera cada tecido e tipo de item.",
+    benefits: [
+      "Cuidado com os tecidos",
+      "Mais conforto para a rotina",
+      "Atendimento em domicílio",
+    ],
+    items: [
+      "Carrinho de bebê",
+      "Bebê conforto",
+      "Cadeirinha infantil",
+      "Colchão infantil",
+      "Tapetes de quarto infantil",
+      "Estofados usados por crianças",
+    ],
+    cta: "Quero higienizar itens infantis",
+    whatsappMessage:
+      "Olá, Jesus Clean! Quero avaliar itens infantis. Vou enviar fotos, quantidades e minha região.",
+  },
+  beforeAfter: {
+    eyebrow: "Antes e depois",
+    title: "Resultados que você consegue ver",
+    text: "Acompanhe algumas transformações realizadas pela Jesus Clean.",
+    ariaLabel: "Resultados reais de higienização",
   },
   specialist: {
-    eyebrow: "O especialista",
-    title: "Aprenda com quem vive a praia todos os dias.",
+    eyebrow: "Quem somos",
+    title: "Cuidado profissional, do primeiro contato ao resultado.",
     body:
-      'Wallace "Samurai" Costa une prática na areia, leitura do nível de cada aluno e orientação clara para transformar insegurança em evolução real.',
-    imageAlt: "Wallace Samurai Costa na praia com um cachorro",
-    captionName: 'Wallace "Samurai" Costa',
-    captionText: "Altinha, praia e orientação prática",
-    locationBadge: "Posto 12 • Praia do Pontal",
-    metricsAria: "Métricas confirmadas",
+      "A Jesus Clean nasceu para entregar higienização profissional com cuidado, confiança e resultado visível. Igor Jesus lidera os atendimentos com atenção aos detalhes e compromisso com cada cliente.",
+    imageAlt: "Igor Jesus, fundador da Jesus Clean, usando uniforme azul da marca",
+    captionName: "Igor Jesus",
+    captionText: "Fundador da Jesus Clean",
+    locationBadge: "Atendimento no Rio de Janeiro",
+    metricsAria: "Indicadores comerciais sujeitos a comprovação",
     metrics: [
-      {
-        value: 3,
-        suffix: "",
-        label: "Idiomas de atendimento",
-        proof: "Confirmado em business.serviceFacts.languages",
-      },
-      {
-        value: 1,
-        suffix: "h",
-        label: "Duração média",
-        proof: "Confirmado em business.serviceFacts.duration",
-      },
-      {
-        value: 7,
-        suffix: "",
-        label: "Dias por semana",
-        proof: "Confirmado em business.serviceFacts.frequency",
-      },
+      { value: 900, prefix: "+", suffix: "", label: "Clientes atendidos" },
+      { value: 100, prefix: "", suffix: "%", label: "Atendimento no RJ" },
+      { value: 5, prefix: "", suffix: "★", label: "Qualidade profissional" },
     ],
     features: [
       {
-        title: "Treino no seu ritmo",
-        text: "A aula parte do seu momento atual e evolui sem pressa.",
+        title: "Cuidado com o tecido",
+        text: "Cada peça é avaliada antes da definição do procedimento.",
       },
       {
-        title: "Leitura prática na areia",
-        text: "Correções simples ajudam você a entender a bola e o corpo.",
+        title: "Atendimento próximo",
+        text: "Orientação clara para o preparo, a execução e a secagem.",
       },
     ],
-    cta: "Quero falar com o Samurai",
+    cta: "Falar com Igor no WhatsApp",
+    instagramCta: "Instagram",
     whatsappMessage:
-      "Olá, Samurai! Vi sua apresentação no site e quero entender qual aula combina com meu nível.",
+      "Olá, Igor! Conheci a Jesus Clean pelo site e quero avaliar meu estofado.",
   },
   community: {
-    eyebrow: "Comunidade",
-    title: "Uma comunidade que evolui junta.",
+    eyebrow: "Por que escolher a Jesus Clean",
+    title: "Quatro pilares em cada atendimento.",
     body:
-      "Pessoas de diferentes níveis dividindo a mesma energia, aprendendo e aproveitando a praia.",
+      "Uma experiência organizada, com avaliação da peça, cuidado na execução e orientação próxima.",
     imageAlt:
-      "Grupo da Altinha com Samurai reunido na Praia do Pontal depois de uma atividade",
-    testimonialsTitle: "Avaliações reais",
-    noTestimonials:
-      "Avaliações do Google autorizadas ainda não foram adicionadas. O carrossel fica oculto até existirem dados reais.",
-    cta: "Quero viver essa experiência",
+      "Igor Jesus usando uniforme azul em ambiente residencial preparado para atendimento",
+    testimonialsTitle: "Pilares do atendimento",
+    noTestimonials: "Nenhuma avaliação autorizada publicada.",
+    pillars: [
+      {
+        title: "Atendimento em domicílio",
+        text: "A Jesus Clean vai até sua casa ou empresa com horário agendado.",
+      },
+      {
+        title: "Cuidado específico",
+        text: "O tecido, o tamanho e o estado da peça entram na avaliação inicial.",
+      },
+      {
+        title: "Processo profissional",
+        text: "A execução é organizada para higienizar a peça no próprio local.",
+      },
+      {
+        title: "Resultado visível",
+        text: "Acompanhamento próximo e orientação para a etapa de secagem.",
+      },
+    ],
+    cta: "Quero avaliar minha peça",
     whatsappMessage:
-      "Olá, Samurai! Vi a experiência da comunidade no site e queria entender como participar das aulas.",
+      "Olá, Jesus Clean! Quero avaliar uma peça e entender o processo de higienização.",
   },
   testimonials: {
     carouselAria: "Avaliações autorizadas",
@@ -307,219 +447,172 @@ export const ptBR = {
   },
   practical: {
     eyebrow: "Como funciona",
-    title: "Tudo que você precisa saber antes de chegar na areia.",
+    title: "Como funciona o atendimento",
     body:
-      "O contato é direto, o treino respeita seu nível e os detalhes finais são confirmados pelo WhatsApp antes da primeira aula.",
-    stepsAria: "Passos para começar",
+      "Solicite sua avaliação e receba orientação para agendar a higienização.",
+    stepsAria: "Etapas do atendimento",
     steps: [
       {
         number: "01",
-        title: "Chame pelo WhatsApp",
-        text: "O primeiro contato é direto, sem formulário longo e sem burocracia.",
+        title: "Envie fotos pelo WhatsApp",
+        text:
+          "Mostre o estofado, a quantidade de peças e os principais pontos que deseja higienizar.",
       },
       {
         number: "02",
-        title: "Conte seu nível e objetivo",
+        title: "Receba a avaliação",
         text:
-          "Diga se está começando, se já pratica ou se quer evoluir algum ponto técnico.",
+          "A equipe analisa o tipo de peça, tecido, tamanho, estado atual e localização.",
       },
       {
         number: "03",
-        title: "Receba a orientação",
-        text: "Samurai indica o melhor caminho para sua primeira experiência na areia.",
+        title: "Agende o atendimento",
+        text:
+          "Escolha uma data disponível para receber a Jesus Clean em sua casa ou empresa.",
       },
       {
         number: "04",
-        title: "Vá para a primeira aula",
+        title: "Receba a higienização",
         text:
-          "Os detalhes do encontro são confirmados no contato, de acordo com sua disponibilidade.",
+          "O serviço é realizado no local e você recebe as orientações necessárias para a secagem.",
       },
     ],
     firstClass: {
-      eyebrow: "Sua primeira aula",
-      title: "Orientação na areia, ritmo adaptado e materiais da aula.",
+      eyebrow: "Avaliação inicial",
+      title: "Fotos e contexto ajudam a orientar o atendimento.",
       text:
-        "A experiência acontece na Praia do Pontal, no Recreio dos Bandeirantes, na região do Posto 12. Você pode começar sozinho e confirmar o ponto de encontro no contato.",
+        "O pré-orçamento considera a peça, o tecido, o tamanho, o estado atual e a região. O valor não é calculado automaticamente.",
     },
     facts: [
-      { label: "Duração média", value: "Aproximadamente uma hora" },
-      { label: "Local", value: "Praia do Pontal, próximo ao Posto 12" },
-      { label: "Níveis", value: "Do primeiro contato ao aluno que já joga" },
-      { label: "Períodos", value: "Cedo e no fim da tarde" },
-      { label: "Idiomas", value: "PT, EN e ES" },
+      { label: "Contato", value: "Pré-orçamento por fotos" },
+      { label: "Área", value: "Diversas regiões do RJ" },
+      { label: "Peças", value: "Residenciais e comerciais" },
+      { label: "Agenda", value: "Disponibilidade confirmada" },
+      { label: "Execução", value: "Atendimento no local" },
     ],
-    checklistTitle: "O que levar",
+    checklistTitle: "O que enviar",
     checklist: [
-      "Roupa de praia",
-      "Protetor solar",
-      "Disposição para treinar na areia",
-      "Confirmação do ponto de encontro",
+      "Fotos gerais e dos principais pontos",
+      "Quantidade e tipo de peças",
+      "Bairro do atendimento",
+      "Prazo desejado",
     ],
-    primaryCta: "Agendar minha primeira aula",
-    secondaryCta: "Refazer o pré-atendimento",
+    primaryCta: "Solicitar avaliação",
+    secondaryCta: "Refazer pré-orçamento",
     whatsappMessage:
-      "Olá, Samurai! Vi os detalhes das aulas no site e gostaria de entender qual opção faz mais sentido para mim.",
+      "Olá, Jesus Clean! Quero enviar os dados e fotos para uma avaliação inicial.",
   },
   classProfiles: {
-    heading: "Escolha pelo seu momento",
-    ariaLabel: "Carrossel de perfis de aula",
-    previous: "Perfil anterior",
-    next: "Próximo perfil",
-    dots: "Indicadores dos perfis",
-    dot: "Ir para o perfil {index}",
-    progress: "Perfil {current} de {total}",
-    audienceLabel: "Para quem serve",
+    heading: "Pedidos mais comuns",
+    ariaLabel: "Carrossel de serviços em destaque",
+    previous: "Serviço anterior",
+    next: "Próximo serviço",
+    dots: "Indicadores dos serviços",
+    dot: "Ir para serviço {index}",
+    progress: "Serviço {current} de {total}",
+    audienceLabel: "Indicado para",
     profiles: {
-      zero: {
-        title: "Começar do zero",
+      sofa: {
+        title: "Higienização de sofás",
         description:
-          "Para quem nunca praticou e quer aprender os primeiros movimentos com segurança e tranquilidade.",
-        audience: "Nunca jogou ou sente vergonha de entrar na roda.",
-        cta: "Quero começar do zero",
+          "Avaliação do tecido e limpeza profissional realizada em domicílio.",
+        audience: "Sofás com sujeira acumulada, odores ou aparência desgastada.",
+        cta: "Avaliar meu sofá",
         whatsappMessage:
-          "Olá, Samurai! Tenho interesse em começar do zero e queria entender como funciona a primeira aula na Praia do Pontal.",
+          "Olá, Jesus Clean! Quero avaliar meu sofá e vou enviar fotos.",
       },
-      confidence: {
-        title: "Ganhar confiança",
+      mattress: {
+        title: "Higienização de colchões",
         description:
-          "Para quem já tentou ou está começando e quer se sentir mais leve na areia.",
-        audience: "Já teve contato com a altinha, mas ainda joga com insegurança.",
-        cta: "Quero ganhar confiança",
+          "Procedimento orientado ao material, tamanho e estado da peça.",
+        audience: "Colchões que precisam de limpeza profunda ou manutenção.",
+        cta: "Avaliar meu colchão",
         whatsappMessage:
-          "Olá, Samurai! Tenho interesse em ganhar confiança na altinha e queria saber qual caminho faz sentido para mim.",
+          "Olá, Jesus Clean! Quero avaliar meu colchão e vou enviar fotos.",
       },
-      technique: {
-        title: "Evoluir a técnica",
+      combo: {
+        title: "Mais de uma peça",
         description:
-          "Para quem já pratica um pouco e quer ajustar toque, postura e controle.",
-        audience: "Já joga ou treina e quer evoluir fundamentos específicos.",
-        cta: "Quero evoluir a técnica",
+          "Organize a avaliação de sofás, cadeiras, poltronas ou outros estofados.",
+        audience: "Residências, empresas e condomínios com múltiplos itens.",
+        cta: "Avaliar várias peças",
         whatsappMessage:
-          "Olá, Samurai! Tenho interesse em evoluir minha técnica e queria saber qual aula combina com meu momento.",
+          "Olá, Jesus Clean! Quero avaliar mais de uma peça e vou enviar fotos e quantidades.",
       },
     },
   },
   location: {
-    eyebrow: "Localização",
-    title: "Seu treino acontece de frente para o mar.",
+    eyebrow: "Área de atendimento",
+    title: "Atendimento em diversas regiões do Rio de Janeiro",
     body:
-      "As aulas acontecem na Praia do Pontal, no Recreio, na região do Posto 12. O ponto exato é confirmado no contato para facilitar sua chegada.",
-    meetingLabel: "Ponto de encontro",
-    meetingPoint: "Praia do Pontal, região do Posto 12",
-    neighborhoodAndCity: "Recreio dos Bandeirantes, Rio de Janeiro",
-    exactNote: "Ponto exato confirmado pelo WhatsApp antes da aula.",
-    route: "Abrir rota",
-    cta: "Confirmar ponto pelo WhatsApp",
-    mapTitle: "Mapa aproximado da Praia do Pontal, região do Posto 12",
-    mapPendingTitle: "Mapa pendente de confirmação.",
+      "A Jesus Clean vai até você com atendimento agendado para residências, empresas e condomínios.",
+    meetingLabel: "Modalidade",
+    meetingPoint: "Atendimento em domicílio",
+    neighborhoodAndCity: "Rio de Janeiro, RJ",
+    exactNote: "Bairro e disponibilidade confirmados antes do agendamento.",
+    route: "Enviar localização",
+    cta: "Consultar meu bairro",
+    mapTitle: "Representação da área de atendimento",
+    mapPendingTitle: "Atendimento móvel no Rio de Janeiro",
     mapPendingText:
-      "A referência confirmada é Praia do Pontal, Recreio dos Bandeirantes, região do Posto 12.",
+      "Não exibimos endereço ou mapa fixo. Consulte sua região para confirmar disponibilidade.",
+    regionsLabel: "Regiões consultadas",
+    regions: [
+      "Zona Sul",
+      "Zona Norte",
+      "Zona Oeste",
+      "Centro",
+      "Barra e Recreio",
+      "Tijuca e Méier",
+      "Baixada e entorno sob consulta",
+    ],
     whatsappMessage:
-      "Olá, Samurai! Quero confirmar o ponto de encontro da aula na Praia do Pontal, região do Posto 12.",
+      "Olá, Jesus Clean! Quero confirmar se vocês atendem meu bairro. Minha localização é:",
   },
   faq: {
-    eyebrow: "FAQ",
-    title: "Respostas diretas antes de chamar.",
+    eyebrow: "Dúvidas frequentes",
+    title: "Informação clara antes do atendimento.",
     text:
-      "As respostas abaixo usam apenas informações confirmadas. Valor, disponibilidade e formato são alinhados no contato.",
+      "Prazos, resultados e disponibilidade dependem da avaliação de cada peça.",
     cta: "Tirar dúvida no WhatsApp",
     whatsappMessage:
-      "Olá, Samurai! Li o FAQ e queria tirar uma dúvida sobre as aulas de altinha.",
-    items: [
-      {
-        id: "preciso-saber-jogar",
-        question: "Preciso já saber jogar?",
-        answer:
-          "Não. A aula atende desde quem nunca jogou até quem já pratica e quer evoluir tecnicamente.",
-      },
-      {
-        id: "posso-ir-sozinho",
-        question: "Posso ir sozinho?",
-        answer:
-          "Pode. O contato pelo WhatsApp ajuda a entender seu momento e orientar a melhor forma de começar.",
-      },
-      {
-        id: "preciso-levar-bola",
-        question: "Preciso levar bola?",
-        answer:
-          "A aula inclui orientação e materiais utilizados na experiência. Se houver alguma necessidade específica, ela é confirmada no contato.",
-      },
-      {
-        id: "o-que-vestir",
-        question: "O que devo vestir?",
-        answer:
-          "Use roupa de praia confortável e proteção para o sol, como protetor solar.",
-      },
-      {
-        id: "quanto-tempo-dura",
-        question: "Quanto tempo dura a aula?",
-        answer: "A duração média é de aproximadamente uma hora.",
-      },
-      {
-        id: "onde-acontece",
-        question: "Onde acontece?",
-        answer:
-          "As aulas acontecem na Praia do Pontal, no Recreio dos Bandeirantes, região do Posto 12. O ponto exato é confirmado pelo WhatsApp.",
-      },
-      {
-        id: "periodos",
-        question: "Quais períodos estão disponíveis?",
-        answer:
-          "Os horários são prioritariamente cedo e no fim da tarde. A disponibilidade real é confirmada no contato.",
-      },
-      {
-        id: "valor",
-        question: "Como descubro o valor?",
-        answer:
-          "As opções e condições são informadas no contato pelo WhatsApp, de acordo com o formato mais adequado.",
-      },
-      {
-        id: "idiomas",
-        question: "Há atendimento em outros idiomas?",
-        answer: "Sim. O atendimento pode ser feito em português, inglês e espanhol.",
-      },
-      {
-        id: "agendar",
-        question: "Como faço para agendar?",
-        answer:
-          "Chame pelo WhatsApp, conte seu nível e objetivo, e receba a orientação para combinar a primeira aula.",
-      },
-    ],
+      "Olá, Jesus Clean! Li as dúvidas frequentes e gostaria de uma orientação.",
+    items: faqItems,
   },
   finalCta: {
-    eyebrow: "Comece na areia",
-    title: "Sua primeira evolução pode começar na areia.",
+    eyebrow: "Pré-orçamento por fotos",
+    title: "Seu estofado pode parecer novo de novo",
     text:
-      "Não importa se você nunca jogou ou se já pratica. O primeiro passo é conversar com o Samurai e entender a melhor forma de começar.",
-    primary: "Falar com o Samurai no WhatsApp",
-    secondary: "Descobrir a aula ideal",
-    visualTop: "Praia do Pontal",
-    visualStrong: "Comece no seu ritmo",
+      "Envie uma foto e receba orientação para higienizar seu sofá, colchão, tapete ou outro estofado.",
+    primary: "Solicitar orçamento no WhatsApp",
+    secondary: "Fazer pré-orçamento",
+    visualTop: "Atendimento agendado",
+    visualStrong: "Cuidado em cada detalhe",
     whatsappMessage:
-      "Olá, Samurai! Quero agendar pelo WhatsApp e entender como começar na Praia do Pontal.",
+      "Olá, Jesus Clean! Quero enviar fotos e solicitar um pré-orçamento.",
   },
   footer: {
     description:
-      "Aulas de altinha na Praia do Pontal, no Recreio dos Bandeirantes, com treino adaptado e contato direto pelo WhatsApp.",
+      "Higienização profissional de estofados residenciais e comerciais no Rio de Janeiro.",
     whatsappMessage:
-      "Olá, Samurai! Vim pelo rodapé do site e quero saber como funcionam as aulas.",
+      "Olá, Jesus Clean! Vim pelo site e gostaria de solicitar uma avaliação.",
     navigationTitle: "Navegação",
-    infoTitle: "Informações",
-    serviceLanguages: "Atendimento PT, EN e ES",
+    infoTitle: "Atendimento",
+    serviceLanguages: "Rio de Janeiro • sob consulta",
     rights: "Todos os direitos reservados.",
     privacy: "Política de privacidade",
     cookiePreferences: "Preferências de cookies",
   },
   floating: {
-    ariaLabel: "Chamar Altinha com Samurai no WhatsApp",
+    ariaLabel: "Chamar a Jesus Clean no WhatsApp",
     message:
-      "Olá, Samurai! Vim pelo botão flutuante do site e quero entender como funcionam as aulas de altinha.",
+      "Olá, Jesus Clean! Quero enviar fotos e solicitar um pré-orçamento.",
   },
   consent: {
     eyebrow: "Privacidade",
-    title: "Controle seus cookies.",
+    title: "Você controla os cookies.",
     text:
-      "Usamos essenciais para o site funcionar. Analytics e marketing só entram se você permitir. Você pode mudar isso no rodapé.",
+      "Usamos cookies essenciais para o site funcionar. Analytics e marketing só são ativados com sua permissão.",
     privacyLink: "Ver política de privacidade",
     optionsAria: "Preferências de cookies",
     essentialTitle: "Essenciais",
@@ -539,12 +632,12 @@ export const ptBR = {
     eyebrow: "Privacidade",
     title: "Política de privacidade inicial",
     intro:
-      "Esta página descreve a estrutura de privacidade do site Altinha com Samurai. Ela não substitui a validação jurídica final porque nome jurídico, CNPJ, e-mail de privacidade e prazos formais ainda precisam ser confirmados.",
+      "Esta página descreve a estrutura de privacidade do site Jesus Clean. A validação jurídica final depende do nome jurídico, CNPJ, e-mail de privacidade e prazos formais ainda pendentes.",
     sections: [
       {
         title: "Dados que você informa",
         text:
-          "Quando você chama pelo WhatsApp ou usa o quiz do site, pode informar nível, objetivo, preferência de horário, dúvidas e dados de contato dentro da própria conversa.",
+          "Ao usar o quiz ou iniciar uma conversa, você pode informar tipo de peça, quantidade, problema, região, prazo e dados enviados diretamente pelo WhatsApp.",
       },
       {
         title: "Dados técnicos",
@@ -559,19 +652,19 @@ export const ptBR = {
       {
         title: "Compartilhamento",
         text:
-          "Integrações como Google Analytics, Google Tag Manager ou Meta Pixel só são carregadas se houver IDs reais configurados e consentimento compatível.",
+          "Google Analytics, Google Tag Manager ou Meta Pixel só são carregados quando houver IDs reais configurados e consentimento compatível.",
       },
       {
         title: "Pontos pendentes",
         text:
-          "Nome jurídico, CNPJ, e-mail de privacidade e prazos formais de retenção ainda precisam ser confirmados pelo responsável da marca.",
+          "Nome jurídico, CNPJ, e-mail de privacidade, base legal e prazos de retenção precisam de validação pelo responsável da marca.",
       },
     ],
   },
   whatsapp: {
     defaultMessage:
-      "Olá, Samurai! Conheci as aulas pelo site e gostaria de saber como funciona para começar.",
-    quizAnswersTitle: "Respostas do pré-atendimento:",
+      "Olá, Jesus Clean! Gostaria de enviar fotos e solicitar um pré-orçamento.",
+    quizAnswersTitle: "Respostas do pré-orçamento:",
     campaignTitle: "Origem da campanha:",
     origin: "Origem do clique",
     section: "Seção",

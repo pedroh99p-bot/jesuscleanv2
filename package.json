@@ -1,6 +1,6 @@
 {
-  "name": "altinha-com-samurai",
-  "version": "2.0.0-stage-2",
+  "name": "jesus-clean-landing-page",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "lucide-react": "latest",
-    "next": "latest",
+    "next": "16.2.12",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -21,6 +21,7 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-    "postcss": "8.5.10"
+    "postcss": "8.5.23",
+    "sharp": "0.35.3"
   }
 }
