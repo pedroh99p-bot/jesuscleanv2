@@ -47,7 +47,7 @@ export type WhatsAppOptions = {
   locale?: Locale;
 };
 
-export const campaignStorageKey = "samurai_first_campaign_v1";
+export const campaignStorageKey = "jesusclean_first_campaign_v1";
 
 export function extractCampaignRecord(search = ""): CampaignRecord {
   const params = new URLSearchParams(search.startsWith("?") ? search : `?${search}`);
@@ -109,11 +109,11 @@ function buildQuizText(quizData: QuizAnswerLabels | undefined, locale: Locale) {
 
   const dictionary = dictionaries[locale];
   const lines = [
-    [dictionary.quiz.labels.level, quizData.level],
-    [dictionary.quiz.labels.goal, quizData.goal],
-    [dictionary.quiz.labels.format, quizData.format],
-    [dictionary.quiz.labels.period, quizData.period],
-    [dictionary.quiz.labels.concern, quizData.concern],
+    [dictionary.quiz.labels.item_type, quizData.item_type],
+    [dictionary.quiz.labels.quantity, quizData.quantity],
+    [dictionary.quiz.labels.main_problem, quizData.main_problem],
+    [dictionary.quiz.labels.region, quizData.region],
+    [dictionary.quiz.labels.timing, quizData.timing],
   ]
     .filter((entry): entry is [string, string] => Boolean(entry[1]))
     .map(([label, value]) => `${label}: ${value}`);
@@ -156,5 +156,6 @@ export function buildWhatsAppUrl({
     campaignText,
   ].filter(Boolean);
 
+  if (!business.whatsappBase) return "#whatsapp-pendente";
   return `${business.whatsappBase}?text=${encodeURIComponent(parts.join("\n\n"))}`;
 }

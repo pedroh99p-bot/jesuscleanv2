@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
+  CircleCheckBig,
   Clock3,
   MessageCircle,
   RotateCcw,
@@ -273,9 +274,10 @@ export function Quiz() {
                     disabled={isAdvancing}
                     onClick={() => selectAnswer(option.id, option.label)}
                   >
-                    <span className="quiz-option__emoji" aria-hidden="true">
-                      {option.emoji}
-                    </span>
+                    <CircleCheckBig
+                      className="quiz-option__emoji"
+                      aria-hidden="true"
+                    />
                     <span>{option.label}</span>
                   </button>
                 ))}

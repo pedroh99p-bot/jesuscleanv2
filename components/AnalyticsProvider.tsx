@@ -31,14 +31,14 @@ function loadAnalyticsScripts(consent: ConsentPreferences) {
   if (process.env.NODE_ENV === "development" && !hasAnyId && !devNoticeShown) {
     devNoticeShown = true;
     console.info(
-      "[Altinha com Samurai] Analytics sem IDs públicos configurados; integrações externas não foram carregadas.",
+      "[Jesus Clean] Analytics sem IDs públicos configurados; integrações externas não foram carregadas.",
     );
   }
 
   if (consent.analytics && analyticsConfig.gtmId) {
     window.dataLayer = window.dataLayer ?? [];
 
-    if (!document.getElementById("samurai-gtm-script")) {
+    if (!document.getElementById("jesusclean-gtm-script")) {
       window.dataLayer.push({
         "gtm.start": Date.now(),
         event: "gtm.js",
@@ -46,7 +46,7 @@ function loadAnalyticsScripts(consent: ConsentPreferences) {
     }
 
     loadExternalScript(
-      "samurai-gtm-script",
+      "jesusclean-gtm-script",
       `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(
         analyticsConfig.gtmId,
       )}`,
@@ -63,7 +63,7 @@ function loadAnalyticsScripts(consent: ConsentPreferences) {
       });
 
     loadExternalScript(
-      "samurai-ga-script",
+      "jesusclean-ga-script",
       `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
         analyticsConfig.gaMeasurementId,
       )}`,
@@ -88,7 +88,7 @@ function loadAnalyticsScripts(consent: ConsentPreferences) {
       );
 
     loadExternalScript(
-      "samurai-meta-script",
+      "jesusclean-meta-script",
       "https://connect.facebook.net/en_US/fbevents.js",
     );
     window.fbq("init", analyticsConfig.metaPixelId);

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { business } from "@/data/business";
 import type { QuizAnswerLabels } from "@/data/quiz";
 import {
   buildWhatsAppUrl,
@@ -80,6 +81,32 @@ export function WhatsAppButton({
     ...trackingPayload,
   };
 
+  const content = (
+    <>
+      {icon ? <MessageCircle aria-hidden="true" size={20} /> : null}
+      <span>{children}</span>
+    </>
+  );
+
+  if (!business.whatsappConfigured) {
+    return (
+      <button
+        type="button"
+        className={cx(
+          "wa-button",
+          `wa-button--${variant}`,
+          "wa-button--disabled",
+          className,
+        )}
+        disabled
+        aria-label={ariaLabel ?? "WhatsApp pendente de configuração"}
+        title="Número oficial de WhatsApp pendente"
+      >
+        {content}
+      </button>
+    );
+  }
+
   return (
     <a
       className={cx("wa-button", `wa-button--${variant}`, className)}
@@ -103,8 +130,7 @@ export function WhatsAppButton({
         }
       }}
     >
-      {icon ? <MessageCircle aria-hidden="true" size={20} /> : null}
-      <span>{children}</span>
+      {content}
     </a>
   );
 }

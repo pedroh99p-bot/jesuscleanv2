@@ -10,9 +10,9 @@ export const analyticsConfig = {
   metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() ?? "",
 } as const;
 
-export const consentStorageKey = "samurai_consent_v1";
-export const consentEventName = "samurai:consent-updated";
-export const openConsentEventName = "samurai:open-consent";
+export const consentStorageKey = "jesusclean_consent_v1";
+export const consentEventName = "jesusclean:consent-updated";
+export const openConsentEventName = "jesusclean:open-consent";
 
 export type ConsentPreferences = {
   version: 1;
@@ -164,7 +164,7 @@ export function trackEvent(
   const fullPayload = withCampaignPayload(payload);
 
   window.dispatchEvent(
-    new CustomEvent("samurai:analytics", {
+    new CustomEvent("jesusclean:analytics", {
       detail: { event, ...fullPayload },
     }),
   );
@@ -188,8 +188,8 @@ export function trackLead(payload: AnalyticsPayload = {}) {
   if (typeof window === "undefined" || !canTrack("lead")) return;
 
   try {
-    if (window.sessionStorage.getItem("samurai_lead_tracked_v1")) return;
-    window.sessionStorage.setItem("samurai_lead_tracked_v1", "1");
+    if (window.sessionStorage.getItem("jesusclean_lead_tracked_v1")) return;
+    window.sessionStorage.setItem("jesusclean_lead_tracked_v1", "1");
   } catch {
     return;
   }
