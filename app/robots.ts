@@ -2,11 +2,20 @@ import type { MetadataRoute } from "next";
 import { business } from "@/data/business";
 
 export default function robots(): MetadataRoute.Robots {
+  if (!business.isPublicSiteConfigured) {
+    return {
+      rules: {
+        userAgent: "*",
+        disallow: "/",
+      },
+    };
+  }
+
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/legacy"],
+      disallow: [],
     },
     sitemap: `${business.siteUrl}/sitemap.xml`,
   };

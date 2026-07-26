@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     siteName: business.name,
     images: [
       {
-        url: business.assets.communityImage,
-        width: 1200,
-        height: 630,
-        alt: "Samurai e alunos em encontro de altinha na praia",
+        url: business.assets.socialImage,
+        width: 1672,
+        height: 941,
+        alt: "Jesus Clean — higienização profissional de estofados",
       },
     ],
     locale: "pt_BR",
@@ -48,16 +48,20 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: [business.assets.communityImage],
+    images: [business.assets.socialImage],
   },
   icons: {
     icon: business.assets.logo,
     apple: business.assets.logo,
   },
+  robots: {
+    index: business.isPublicSiteConfigured,
+    follow: business.isPublicSiteConfigured,
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#071426",
+  themeColor: "#0876a3",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

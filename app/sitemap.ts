@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { business } from "@/data/business";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  if (!business.isPublicSiteConfigured) return [];
+
   return [
     {
       url: business.siteUrl,
