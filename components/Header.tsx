@@ -16,17 +16,36 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
+    let frame = 0;
+    let previousState: boolean | null = null;
+
+    const updateHeader = () => {
+      frame = 0;
+      const nextState = window.scrollY > 12;
+      if (nextState === previousState) return;
+      previousState = nextState;
+      setScrolled(nextState);
+    };
+
+    const onScroll = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateHeader);
+    };
+
+    updateHeader();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
     <header className={`site-header${scrolled ? " site-header--scrolled" : ""}`}>
       <a className="brand" href="#top" aria-label={business.name}>
         <Image
-          src={business.assets.favicon}
+          src={business.assets.brandIcon}
           alt=""
           width={56}
           height={56}

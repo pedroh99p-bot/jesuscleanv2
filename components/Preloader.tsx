@@ -7,9 +7,10 @@ import { useTranslations } from "@/i18n/useTranslations";
 
 const storageKey = "jesusclean-preloader-seen";
 const heroReadyEvent = "jesusclean:hero-ready";
-const minimumVisibleMs = 820;
-const maximumVisibleMs = 1550;
-const curtainDurationMs = 560;
+const curtainCompleteEvent = "jesusclean:curtain-complete";
+const minimumVisibleMs = 1100;
+const maximumVisibleMs = 1900;
+const curtainDurationMs = 760;
 
 type PreloaderState = "visible" | "leaving" | "hidden";
 
@@ -31,9 +32,30 @@ export function Preloader() {
       storage = null;
     }
 
+    const startHeroVideo = () => {
+      const video = document.querySelector<HTMLVideoElement>(
+        ".hero__background-video",
+      );
+
+      if (video) {
+        video.autoplay = true;
+        video.defaultMuted = true;
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.volume = 0;
+        void video.play().catch(() => {
+          // O hero mantém tentativas automáticas adicionais sem depender de toque.
+        });
+      }
+
+      window.dispatchEvent(new Event(curtainCompleteEvent));
+    };
+
     const alreadySeen = storage?.getItem(storageKey);
     if (alreadySeen === "true") {
       setState("hidden");
+      window.requestAnimationFrame(startHeroVideo);
       return;
     }
 
@@ -49,6 +71,7 @@ export function Preloader() {
       setState("leaving");
 
       window.setTimeout(() => {
+        startHeroVideo();
         setState("hidden");
         restoreScroll();
         try {
@@ -107,7 +130,7 @@ export function Preloader() {
         <div className="preloader__ring" />
         <Image
           className="preloader__logo"
-          src={business.assets.logo}
+          src={business.assets.brandIcon}
           alt=""
           width={112}
           height={112}

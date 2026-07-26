@@ -65,7 +65,6 @@ export function Quiz() {
 
   useEffect(() => {
     if (started) {
-      titleRef.current?.focus();
       trackEvent("quiz_step", {
         section: "quiz",
           quiz_step: completed ? "resultado" : step + 1,
@@ -116,7 +115,7 @@ export function Quiz() {
       }
 
       setStep((current) => Math.min(current + 1, quizQuestions.length - 1));
-    }, 260);
+    }, 180);
   };
 
   const goBack = () => {
@@ -139,7 +138,9 @@ export function Quiz() {
     setIsAdvancing(false);
     setStep(0);
     setAnswers({});
-    window.requestAnimationFrame(() => coverTitleRef.current?.focus());
+    window.requestAnimationFrame(() =>
+      coverTitleRef.current?.focus({ preventScroll: true }),
+    );
   };
 
   return (

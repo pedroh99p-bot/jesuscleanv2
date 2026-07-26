@@ -45,7 +45,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       >
         <div className="mobile-menu__top">
           <Image
-            src={business.assets.favicon}
+            src={business.assets.brandIcon}
             alt={business.name}
             width={56}
             height={56}

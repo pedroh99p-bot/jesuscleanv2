@@ -8,6 +8,7 @@ import { WhatsAppButton } from "./WhatsAppButton";
 
 const benefitIcons = [Sparkles, Sofa, BedDouble, MapPin] as const;
 const heroReadyEvent = "jesusclean:hero-ready";
+const curtainCompleteEvent = "jesusclean:curtain-complete";
 
 export function Hero() {
   const { t } = useTranslations();
@@ -65,7 +66,13 @@ export function Hero() {
     playbackFrame = window.requestAnimationFrame(startPlayback);
     playbackRetry = window.setTimeout(startPlayback, 240);
     playbackPulse = window.setInterval(() => {
-      if (!document.hidden && video.paused) startPlayback();
+      if (!video.paused) {
+        window.clearInterval(playbackPulse);
+        playbackPulse = 0;
+        return;
+      }
+
+      if (!document.hidden) startPlayback();
     }, 700);
 
     if (video.readyState >= 2) {
@@ -83,6 +90,7 @@ export function Hero() {
     window.addEventListener("pageshow", startPlayback);
     window.addEventListener("focus", startPlayback);
     window.addEventListener("online", startPlayback);
+    window.addEventListener(curtainCompleteEvent, startPlayback);
     window.addEventListener("pointerdown", startPlayback, { once: true });
     window.addEventListener("touchstart", startPlayback, {
       once: true,
@@ -109,6 +117,7 @@ export function Hero() {
       window.removeEventListener("pageshow", startPlayback);
       window.removeEventListener("focus", startPlayback);
       window.removeEventListener("online", startPlayback);
+      window.removeEventListener(curtainCompleteEvent, startPlayback);
       window.removeEventListener("pointerdown", startPlayback);
       window.removeEventListener("touchstart", startPlayback);
       window.removeEventListener("scroll", startPlayback);

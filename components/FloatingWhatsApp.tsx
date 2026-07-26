@@ -80,7 +80,9 @@ export function FloatingWhatsApp() {
 
   const closeAssistant = () => {
     setOpen(false);
-    window.requestAnimationFrame(() => launcherRef.current?.focus());
+    window.requestAnimationFrame(() =>
+      launcherRef.current?.focus({ preventScroll: true }),
+    );
   };
 
   const selectAnswer = (answerId: string, answerLabel: string) => {
@@ -128,35 +130,32 @@ export function FloatingWhatsApp() {
 
   useEffect(() => {
     if (open) {
-      window.requestAnimationFrame(() => panelTitleRef.current?.focus());
+      window.requestAnimationFrame(() =>
+        panelTitleRef.current?.focus({ preventScroll: true }),
+      );
     }
   }, [open]);
 
   useEffect(() => {
-    let frame = 0;
+    const hero = document.getElementById("top");
+    if (!hero) {
+      setAssistantVisible(window.scrollY > 0);
+      return;
+    }
 
-    const updateVisibility = () => {
-      const hero = document.getElementById("top");
-      const hasPassedHero = hero
-        ? hero.getBoundingClientRect().bottom <= 0
-        : window.scrollY > 0;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setAssistantVisible(
+          !entry.isIntersecting && entry.boundingClientRect.bottom <= 0,
+        );
+      },
+      { threshold: 0 },
+    );
 
-      setAssistantVisible(hasPassedHero);
-    };
-
-    const requestVisibilityUpdate = () => {
-      if (frame) window.cancelAnimationFrame(frame);
-      frame = window.requestAnimationFrame(updateVisibility);
-    };
-
-    updateVisibility();
-    window.addEventListener("scroll", requestVisibilityUpdate, { passive: true });
-    window.addEventListener("resize", requestVisibilityUpdate);
+    observer.observe(hero);
 
     return () => {
-      if (frame) window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", requestVisibilityUpdate);
-      window.removeEventListener("resize", requestVisibilityUpdate);
+      observer.disconnect();
     };
   }, []);
 

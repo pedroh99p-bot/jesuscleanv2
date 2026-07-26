@@ -53,13 +53,13 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: business.assets.favicon,
+        url: business.assets.brandIcon,
         type: "image/webp",
         sizes: "any",
       },
     ],
-    shortcut: business.assets.favicon,
-    apple: business.assets.favicon,
+    shortcut: business.assets.brandIcon,
+    apple: business.assets.brandIcon,
   },
   robots: {
     index: business.isPublicSiteConfigured,
