@@ -36,8 +36,14 @@ export function Hero() {
       video.playsInline = true;
       video.defaultMuted = true;
       video.muted = true;
+      video.volume = 0;
+      video.controls = false;
+      video.disablePictureInPicture = true;
+      video.setAttribute("autoplay", "");
+      video.setAttribute("loop", "");
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
+      video.removeAttribute("controls");
       void video.play().catch(() => {
         // O poster continua visível se o navegador bloquear autoplay.
       });
@@ -89,12 +95,14 @@ export function Hero() {
         muted
         loop
         playsInline
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noplaybackrate noremoteplayback"
         preload="auto"
         poster={business.assets.heroPoster}
+        src={business.assets.heroVideo}
         aria-hidden="true"
-      >
-        <source src={business.assets.heroVideo} type="video/mp4" />
-      </video>
+      />
       <div className="hero__overlay" aria-hidden="true" />
       <div className="hero__content">
         <div className="hero__copy">

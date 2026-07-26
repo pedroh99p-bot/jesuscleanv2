@@ -24,12 +24,12 @@ npm run typecheck
 npm run build
 ```
 
-## Configuração obrigatória antes de publicar
+## Configuração antes de publicar
 
 Crie um `.env.local` apenas no ambiente de desenvolvimento ou configure as variáveis na plataforma:
 
 ```bash
-NEXT_PUBLIC_WHATSAPP_NUMBER=5521999999999
+NEXT_PUBLIC_WHATSAPP_NUMBER=5521980325724
 NEXT_PUBLIC_SITE_URL=https://dominio-oficial.com.br
 NEXT_PUBLIC_INSTAGRAM_URL=https://www.instagram.com/perfil-oficial/
 NEXT_PUBLIC_GTM_ID=
@@ -37,7 +37,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=
 NEXT_PUBLIC_META_PIXEL_ID=
 ```
 
-O número deve incluir `55`, DDD e telefone, somente com dígitos. Enquanto ele estiver ausente, os CTAs usam o compartilhamento do WhatsApp com a mensagem pronta; quando configurado, abrem diretamente a conversa com a Jesus Clean. Enquanto o domínio estiver ausente, o site usa `localhost` apenas para build e publica `robots` com bloqueio de indexação.
+O número oficial `5521980325724` já é usado como padrão em todos os CTAs. A variável `NEXT_PUBLIC_WHATSAPP_NUMBER` é opcional e pode substituí-lo; o valor deve incluir `55`, DDD e telefone, somente com dígitos. Enquanto o domínio estiver ausente, o site usa `localhost` apenas para build e publica `robots` com bloqueio de indexação.
 
 ## Fontes centrais
 

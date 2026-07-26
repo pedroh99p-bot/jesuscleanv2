@@ -1,4 +1,6 @@
-const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ?? "";
+const defaultPhone = "5521980325724";
+const rawPhone =
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || defaultPhone;
 const phone = /^55\d{10,11}$/.test(rawPhone) ? rawPhone : null;
 const whatsappBase = phone ? `https://wa.me/${phone}` : "https://wa.me/";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || null;

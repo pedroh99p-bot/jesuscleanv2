@@ -3604,6 +3604,17 @@ section[id] {
   object-fit: cover;
   object-position: 58% 46%;
   background: var(--navy-950);
+  pointer-events: none;
+}
+
+.hero__background-video::-webkit-media-controls,
+.hero__background-video::-webkit-media-controls-enclosure,
+.hero__background-video::-webkit-media-controls-panel,
+.hero__background-video::-webkit-media-controls-play-button,
+.hero__background-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  opacity: 0;
+  -webkit-appearance: none;
 }
 
 .hero__overlay {
