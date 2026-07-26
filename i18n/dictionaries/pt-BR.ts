@@ -610,8 +610,12 @@ export const ptBR = {
   },
   assistant: {
     landmarkLabel: "Assistente de agendamento Jesus Clean",
-    launcherTitle: "Agendamento direto",
+    launcherTitle: "Assistente virtual",
     launcherSubtitle: "Jesus Clean orienta você",
+    directWhatsapp: "Agendamento direto",
+    directWhatsappAria: "Agendamento direto pelo WhatsApp",
+    directWhatsappMessage:
+      "Olá, Jesus Clean! Quero consultar a disponibilidade e agendar uma higienização.",
     open: "Abrir assistente de agendamento",
     close: "Fechar assistente de agendamento",
     title: "Jesus Clean responde",

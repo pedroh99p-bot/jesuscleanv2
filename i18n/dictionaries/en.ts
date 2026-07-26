@@ -659,8 +659,12 @@ export const en = {
   },
   assistant: {
     landmarkLabel: "Jesus Clean scheduling assistant",
-    launcherTitle: "Quick scheduling",
+    launcherTitle: "Virtual assistant",
     launcherSubtitle: "Jesus Clean guides you",
+    directWhatsapp: "Quick scheduling",
+    directWhatsappAria: "Schedule directly on WhatsApp",
+    directWhatsappMessage:
+      "Hi, Jesus Clean! I would like to check availability and schedule an upholstery cleaning.",
     open: "Open scheduling assistant",
     close: "Close scheduling assistant",
     title: "Jesus Clean replies",

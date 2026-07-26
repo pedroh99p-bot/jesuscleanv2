@@ -48,6 +48,8 @@ export function FloatingWhatsApp() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<QuizAnswers>({});
   const [completed, setCompleted] = useState(false);
+  const [assistantVisible, setAssistantVisible] = useState(false);
+  const [whatsappVisible, setWhatsappVisible] = useState(false);
   const launcherRef = useRef<HTMLButtonElement>(null);
   const panelTitleRef = useRef<HTMLHeadingElement>(null);
   const currentQuestion = questions[step];
@@ -132,6 +134,37 @@ export function FloatingWhatsApp() {
   }, [open]);
 
   useEffect(() => {
+    let frame = 0;
+
+    const updateVisibility = () => {
+      const hero = document.getElementById("top");
+      const specialist = document.getElementById("especialista");
+
+      setAssistantVisible(
+        hero ? hero.getBoundingClientRect().bottom <= 0 : window.scrollY > 0,
+      );
+      setWhatsappVisible(
+        specialist ? specialist.getBoundingClientRect().bottom <= 0 : false,
+      );
+    };
+
+    const requestVisibilityUpdate = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(updateVisibility);
+    };
+
+    updateVisibility();
+    window.addEventListener("scroll", requestVisibilityUpdate, { passive: true });
+    window.addEventListener("resize", requestVisibilityUpdate);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", requestVisibilityUpdate);
+      window.removeEventListener("resize", requestVisibilityUpdate);
+    };
+  }, []);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape" && open) closeAssistant();
     };
@@ -139,6 +172,8 @@ export function FloatingWhatsApp() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
+
+  if (!assistantVisible && !open) return null;
 
   return (
     <aside className="scheduling-assistant" aria-label={t.assistant.landmarkLabel}>
@@ -302,30 +337,43 @@ export function FloatingWhatsApp() {
           </div>
         </section>
       ) : (
-        <button
-          ref={launcherRef}
-          type="button"
-          className="scheduling-assistant__launcher"
-          onClick={openAssistant}
-          aria-expanded="false"
-          aria-controls="scheduling-assistant-panel"
-          aria-label={t.assistant.open}
-        >
-          <span className="scheduling-assistant__launcher-avatar">
-            <img
-              src={business.assets.assistantAvatar}
-              alt=""
-              width={60}
-              height={60}
-            />
-            <i aria-hidden="true" />
-          </span>
-          <span className="scheduling-assistant__launcher-copy">
-            <strong>{t.assistant.launcherTitle}</strong>
-            <small>{t.assistant.launcherSubtitle}</small>
-          </span>
-          <ChevronRight aria-hidden="true" />
-        </button>
+        <div className="scheduling-assistant__controls">
+          {whatsappVisible ? (
+            <WhatsAppButton
+              origin="floating"
+              section="floating_scheduling"
+              ctaId="floating-direct-scheduling"
+              className="scheduling-assistant__direct-wa"
+              message={t.assistant.directWhatsappMessage}
+              ariaLabel={t.assistant.directWhatsappAria}
+            >
+              {t.assistant.directWhatsapp}
+            </WhatsAppButton>
+          ) : null}
+
+          <button
+            ref={launcherRef}
+            type="button"
+            className="scheduling-assistant__launcher"
+            onClick={openAssistant}
+            aria-expanded="false"
+            aria-controls="scheduling-assistant-panel"
+            aria-label={t.assistant.open}
+          >
+            <span className="scheduling-assistant__launcher-avatar">
+              <img
+                src={business.assets.assistantAvatar}
+                alt=""
+                width={52}
+                height={52}
+              />
+            </span>
+            <span className="scheduling-assistant__launcher-copy">
+              <strong>{t.assistant.launcherTitle}</strong>
+              <small>{t.assistant.launcherSubtitle}</small>
+            </span>
+          </button>
+        </div>
       )}
     </aside>
   );
