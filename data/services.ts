@@ -20,13 +20,13 @@ export const serviceCatalog = [
     asset: null,
   },
   {
-    id: "poltronas-cadeiras",
-    icon: Armchair,
+    id: "tapetes",
+    icon: Layers3,
     asset: null,
   },
   {
-    id: "tapetes",
-    icon: Layers3,
+    id: "poltronas-cadeiras",
+    icon: Armchair,
     asset: null,
   },
   {

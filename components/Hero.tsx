@@ -28,19 +28,33 @@ export function Hero() {
       return;
     }
 
+    const startPlayback = () => {
+      video.defaultMuted = true;
+      video.muted = true;
+      void video.play().catch(() => {
+        // O poster continua visível se o navegador bloquear autoplay.
+      });
+    };
+
+    startPlayback();
+
     if (video.readyState >= 2) {
       window.requestAnimationFrame(markReady);
-      return;
+    } else {
+      video.addEventListener("loadeddata", markReady, { once: true });
+      video.addEventListener("canplay", markReady, { once: true });
+      video.addEventListener("error", markReady, { once: true });
     }
 
-    video.addEventListener("loadeddata", markReady, { once: true });
-    video.addEventListener("canplay", markReady, { once: true });
-    video.addEventListener("error", markReady, { once: true });
+    video.addEventListener("loadedmetadata", startPlayback);
+    video.addEventListener("canplay", startPlayback);
 
     return () => {
       video.removeEventListener("loadeddata", markReady);
       video.removeEventListener("canplay", markReady);
       video.removeEventListener("error", markReady);
+      video.removeEventListener("loadedmetadata", startPlayback);
+      video.removeEventListener("canplay", startPlayback);
     };
   }, []);
 
@@ -54,7 +68,7 @@ export function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         poster={business.assets.heroPoster}
         aria-hidden="true"
       >

@@ -26,10 +26,10 @@ export function Header() {
     <header className={`site-header${scrolled ? " site-header--scrolled" : ""}`}>
       <a className="brand" href="#top" aria-label={business.name}>
         <Image
-          src={business.assets.logo}
+          src={business.assets.favicon}
           alt=""
-          width={72}
-          height={72}
+          width={56}
+          height={56}
           priority
         />
         <span>

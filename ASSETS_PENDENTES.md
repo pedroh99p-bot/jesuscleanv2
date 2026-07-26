@@ -1,8 +1,6 @@
 # Assets pendentes
 
 - Duas ou mais fotos reais e autorizadas de antes e depois.
-- Imagem Open Graph dedicada em proporção social; a arte de pilares é usada provisoriamente.
-- Favicon definitivo com símbolo legível em 16–48 px; a logo completa é usada provisoriamente.
 - Imagens específicas dos sete serviços.
 - Imagens reais e autorizadas da seção infantil.
 - Fotos ou capturas de avaliações autorizadas.

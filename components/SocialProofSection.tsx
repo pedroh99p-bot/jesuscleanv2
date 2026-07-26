@@ -23,7 +23,7 @@ export function SocialProofSection() {
             src={business.assets.pillarsImage}
             alt={t.community.imageAlt}
             fill
-            sizes="(max-width: 900px) 100vw, 42vw"
+            sizes="(max-width: 1180px) 100vw, 1180px"
           />
         </div>
 

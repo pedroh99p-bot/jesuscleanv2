@@ -3,6 +3,7 @@
 import { CheckCircle2 } from "lucide-react";
 import { serviceCatalog } from "@/data/services";
 import { useTranslations } from "@/i18n/useTranslations";
+import { DraggableCarousel } from "./DraggableCarousel";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 export function ServicesSection() {
@@ -16,13 +17,24 @@ export function ServicesSection() {
           <h2 id="services-title">{t.services.title}</h2>
           <p>{t.services.text}</p>
         </div>
-        <div className="services-section__grid">
-          {serviceCatalog.map((service) => {
+        <DraggableCarousel
+          className="services-section__carousel"
+          trackClassName="services-section__grid"
+          itemCount={serviceCatalog.length}
+          ariaLabel={t.services.title}
+          previousLabel={`${t.services.title}: ${t.classProfiles.previous}`}
+          nextLabel={`${t.services.title}: ${t.classProfiles.next}`}
+        >
+          {serviceCatalog.map((service, index) => {
             const copy = t.services.cards.find((card) => card.id === service.id);
             if (!copy) return null;
             const Icon = service.icon;
             return (
-              <article key={service.id}>
+              <article
+                key={service.id}
+                data-carousel-card={index}
+                aria-label={`${index + 1} / ${serviceCatalog.length}: ${copy.title}`}
+              >
                 <div className="services-section__icon">
                   <Icon aria-hidden="true" />
                 </div>
@@ -44,7 +56,7 @@ export function ServicesSection() {
               </article>
             );
           })}
-        </div>
+        </DraggableCarousel>
       </div>
     </section>
   );

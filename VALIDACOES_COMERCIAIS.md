@@ -7,9 +7,11 @@ As afirmações abaixo devem receber evidência antes de uma publicação comerc
 - Abrangência de atendimento em todo o Rio de Janeiro.
 - Prazo médio de execução de cada serviço.
 - Prazo de secagem por tipo de tecido e condição ambiental.
+- Afirmação de “secagem rápida” exibida na imagem de compartilhamento.
 - Capacidade de remoção de manchas.
 - Capacidade de redução de odores.
 - Segurança e compatibilidade dos produtos com crianças e animais.
+- Afirmação de “produtos seguros” exibida na imagem de compartilhamento.
 - Qualquer garantia de serviço.
 - Urgência ou escassez de agenda.
 - Depoimentos, avaliações e autorização de uso.

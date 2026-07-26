@@ -52,8 +52,8 @@ Os CTAs de WhatsApp ficam desabilitados até a configuração do número oficial
 
 ## 5. Assets baixados
 
-Foram incorporados cinco arquivos oficiais fornecidos e dois pôsteres WebP derivados
-dos vídeos, totalizando sete assets locais de mídia. As fontes e validações estão em
+Foram incorporados sete arquivos oficiais fornecidos e dois pôsteres WebP derivados
+dos vídeos, totalizando nove assets locais de mídia. As fontes e validações estão em
 `public/assets/ASSET_SOURCES.md`.
 
 ## 6. Caminho local de cada asset
@@ -67,6 +67,8 @@ dos vídeos, totalizando sete assets locais de mídia. As fontes e validações 
 | Arte de pilares | `public/assets/pillars/four-pillars.webp` |
 | Logo | `public/assets/brand/jesus-clean-logo.webp` |
 | Igor Jesus | `public/assets/specialist/igor-jesus.webp` |
+| Preview do WhatsApp | `public/assets/seo/whatsapp-share.webp` |
+| Favicon | `public/assets/seo/favicon.webp` |
 
 ## 7. Peso de cada asset
 
@@ -79,6 +81,8 @@ dos vídeos, totalizando sete assets locais de mídia. As fontes e validações 
 | `four-pillars.webp` | 146.904 bytes |
 | `jesus-clean-logo.webp` | 157.208 bytes |
 | `igor-jesus.webp` | 136.408 bytes |
+| `whatsapp-share.webp` | 154.032 bytes |
+| `favicon.webp` | 127.504 bytes |
 
 ## 8. Otimizações realizadas
 
@@ -147,9 +151,9 @@ espaço em branco.
 ## 15. Referências antigas ainda encontradas
 
 Nenhuma referência de runtime ou SEO à Alta Con Samurai, Samurai, Posto 12 ou Praia do
-Pontal foi encontrada pela busca case-insensitive. URLs antigas da Cloudinary aparecem
-somente no documento `public/assets/ASSET_SOURCES.md` como registro das fontes, nunca
-como asset ativo.
+Pontal foi encontrada pela busca case-insensitive. A única URL ativa da Cloudinary é a
+nova imagem de compartilhamento fornecida explicitamente para o preview do WhatsApp;
+os demais assets continuam versionados localmente.
 
 ## 16. Testes executados
 
@@ -203,7 +207,6 @@ ausência deliberada de fotos reais impede sua renderização.
 ## 21. Assets ainda pendentes
 
 - Ao menos duas fotos reais e autorizadas de antes e depois.
-- Open Graph e favicon definitivos.
 - Fotos específicas de serviços e da seção infantil.
 - Avaliações/depoimentos autorizados.
 - Fundo fotográfico específico para o CTA final.
@@ -224,7 +227,7 @@ Os valores estão centralizados e a urgência inicia desativada. Detalhes:
 - O novo projeto usa um repositório Git independente na branch `main`.
 - Histórico organizado em commits de inicialização, assets, dados, fluxo comercial,
   conteúdo/layout, SEO e documentação.
-- A verificação final foi executada sobre o commit técnico `667d36a`.
+- A verificação final foi executada depois do pacote de correções visuais e interativas.
 
 ## 24. URL do novo repositório
 
@@ -232,9 +235,9 @@ Os valores estão centralizados e a urgência inicia desativada. Detalhes:
 
 ## 25. Commit final
 
-O commit técnico validado é `667d36a`. O SHA do commit que inclui este próprio relatório
-não pode ser autorreferenciado sem alterar o próprio SHA; ele é informado no handoff
-final e corresponde ao topo da branch `main` enviada ao GitHub.
+O SHA final é informado no handoff e corresponde ao topo da branch `main` enviada ao
+GitHub. O próprio relatório não autorreferencia o SHA porque essa alteração mudaria o
+hash do commit.
 
 ## 26. URL de deploy
 

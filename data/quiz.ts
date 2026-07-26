@@ -27,6 +27,48 @@ export type LocalizedQuizQuestion = {
 export type QuizAnswers = Partial<Record<QuizQuestionId, string>>;
 export type QuizAnswerLabels = Partial<Record<QuizQuestionId, string>>;
 
+const questionEmojis: Record<QuizQuestionId, string> = {
+  item_type: "🧼",
+  quantity: "🔢",
+  main_problem: "🔎",
+  region: "📍",
+  timing: "📅",
+};
+
+const optionEmojis: Record<string, string> = {
+  sofa: "🛋️",
+  mattress: "🛏️",
+  chairs: "🪑",
+  rug: "🧶",
+  car_seat: "🚗",
+  multiple: "🧺",
+  one: "1️⃣",
+  two: "2️⃣",
+  three_four: "3️⃣",
+  five_plus: "5️⃣",
+  odor: "👃",
+  stains: "🎯",
+  deep_dirt: "🧹",
+  maintenance: "✨",
+  south: "🌊",
+  north: "🧭",
+  west: "🌅",
+  center: "🏙️",
+  other: "📌",
+  asap: "⚡",
+  this_week: "📆",
+  next_week: "🗓️",
+  researching: "🔍",
+};
+
+export function getQuizQuestionEmoji(id: QuizQuestionId) {
+  return questionEmojis[id];
+}
+
+export function getQuizOptionEmoji(id: string) {
+  return optionEmojis[id] ?? "✨";
+}
+
 export function getQuizAnswerLabels(
   answers: QuizAnswers,
   questions: readonly LocalizedQuizQuestion[],

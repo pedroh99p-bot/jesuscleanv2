@@ -41,10 +41,10 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       >
         <div className="mobile-menu__top">
           <Image
-            src={business.assets.logo}
+            src={business.assets.favicon}
             alt={business.name}
-            width={72}
-            height={72}
+            width={56}
+            height={56}
           />
           <button
             type="button"

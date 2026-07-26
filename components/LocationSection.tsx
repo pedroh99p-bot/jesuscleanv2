@@ -1,6 +1,6 @@
 "use client";
 
-import { Compass, MapPin, Send, ShieldCheck } from "lucide-react";
+import { Compass, MapPin, MapPinned, Send, ShieldCheck } from "lucide-react";
 import { useTranslations } from "@/i18n/useTranslations";
 import { WhatsAppButton } from "./WhatsAppButton";
 
@@ -63,7 +63,10 @@ export function LocationSection() {
             <strong>{t.location.regionsLabel}</strong>
             <ul>
               {t.location.regions.map((region) => (
-                <li key={region}>{region}</li>
+                <li key={region}>
+                  <MapPinned aria-hidden="true" />
+                  <span>{region}</span>
+                </li>
               ))}
             </ul>
           </div>

@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: business.assets.socialImage,
-        width: 1672,
-        height: 941,
+        width: 1731,
+        height: 909,
         alt: "Jesus Clean — higienização profissional de estofados",
       },
     ],
@@ -51,8 +51,15 @@ export const metadata: Metadata = {
     images: [business.assets.socialImage],
   },
   icons: {
-    icon: business.assets.logo,
-    apple: business.assets.logo,
+    icon: [
+      {
+        url: business.assets.favicon,
+        type: "image/webp",
+        sizes: "any",
+      },
+    ],
+    shortcut: business.assets.favicon,
+    apple: business.assets.favicon,
   },
   robots: {
     index: business.isPublicSiteConfigured,

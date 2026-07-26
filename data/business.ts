@@ -78,9 +78,11 @@ export const business = {
     introVideo: "/assets/video/jesus-clean-introduction.mp4",
     introPoster: "/assets/video/jesus-clean-introduction-poster.webp",
     logo: "/assets/brand/jesus-clean-logo.webp",
+    favicon: "/assets/seo/favicon.webp",
     pillarsImage: "/assets/pillars/four-pillars.webp",
     specialistPortrait: "/assets/specialist/igor-jesus.webp",
-    socialImage: "/assets/pillars/four-pillars.webp",
+    socialImage:
+      "https://res.cloudinary.com/dhbrxzt5a/image/upload/v1785030927/df70ace0-167a-43cf-b250-995b40858469_w8wvwv.webp",
   },
   analytics: {
     origin: "landing_page_jesus_clean",

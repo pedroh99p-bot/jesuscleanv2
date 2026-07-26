@@ -15,6 +15,8 @@ import { business } from "@/data/business";
 import {
   buildQuizWhatsAppMessage,
   getQuizAnswerLabels,
+  getQuizOptionEmoji,
+  getQuizQuestionEmoji,
   getQuizResult,
   type LocalizedQuizQuestion,
   type QuizAnswers,
@@ -258,7 +260,10 @@ export function Quiz() {
               </div>
 
               <h3 ref={titleRef} tabIndex={-1}>
-                {currentQuestion.question}
+                <span className="quiz-question__emoji" aria-hidden="true">
+                  {getQuizQuestionEmoji(currentQuestion.id)}
+                </span>
+                <span>{currentQuestion.question}</span>
               </h3>
 
               <div className="quiz-options" role="group" aria-label={currentQuestion.question}>
@@ -274,11 +279,16 @@ export function Quiz() {
                     disabled={isAdvancing}
                     onClick={() => selectAnswer(option.id, option.label)}
                   >
-                    <CircleCheckBig
-                      className="quiz-option__emoji"
-                      aria-hidden="true"
-                    />
+                    <span className="quiz-option__emoji" aria-hidden="true">
+                      {getQuizOptionEmoji(option.id)}
+                    </span>
                     <span>{option.label}</span>
+                    {selected === option.id ? (
+                      <CircleCheckBig
+                        className="quiz-option__check"
+                        aria-hidden="true"
+                      />
+                    ) : null}
                   </button>
                 ))}
               </div>
