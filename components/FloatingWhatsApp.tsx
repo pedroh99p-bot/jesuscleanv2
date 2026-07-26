@@ -49,7 +49,6 @@ export function FloatingWhatsApp() {
   const [answers, setAnswers] = useState<QuizAnswers>({});
   const [completed, setCompleted] = useState(false);
   const [assistantVisible, setAssistantVisible] = useState(false);
-  const [whatsappVisible, setWhatsappVisible] = useState(false);
   const launcherRef = useRef<HTMLButtonElement>(null);
   const panelTitleRef = useRef<HTMLHeadingElement>(null);
   const currentQuestion = questions[step];
@@ -138,14 +137,11 @@ export function FloatingWhatsApp() {
 
     const updateVisibility = () => {
       const hero = document.getElementById("top");
-      const specialist = document.getElementById("especialista");
+      const hasPassedHero = hero
+        ? hero.getBoundingClientRect().bottom <= 0
+        : window.scrollY > 0;
 
-      setAssistantVisible(
-        hero ? hero.getBoundingClientRect().bottom <= 0 : window.scrollY > 0,
-      );
-      setWhatsappVisible(
-        specialist ? specialist.getBoundingClientRect().bottom <= 0 : false,
-      );
+      setAssistantVisible(hasPassedHero);
     };
 
     const requestVisibilityUpdate = () => {
@@ -338,7 +334,7 @@ export function FloatingWhatsApp() {
         </section>
       ) : (
         <div className="scheduling-assistant__controls">
-          {whatsappVisible ? (
+          {assistantVisible ? (
             <WhatsAppButton
               origin="floating"
               section="floating_scheduling"

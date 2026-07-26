@@ -26,18 +26,20 @@ npm run build
 
 ## Configuração antes de publicar
 
-Crie um `.env.local` apenas no ambiente de desenvolvimento ou configure as variáveis na plataforma:
+O número oficial do WhatsApp e o domínio público já estão definidos no projeto. Use um `.env.local` apenas para as integrações opcionais:
 
 ```bash
-NEXT_PUBLIC_WHATSAPP_NUMBER=5521980325724
-NEXT_PUBLIC_SITE_URL=https://dominio-oficial.com.br
 NEXT_PUBLIC_INSTAGRAM_URL=https://www.instagram.com/perfil-oficial/
 NEXT_PUBLIC_GTM_ID=
 NEXT_PUBLIC_GA_MEASUREMENT_ID=
 NEXT_PUBLIC_META_PIXEL_ID=
 ```
 
-O número oficial `5521980325724` já é usado como padrão em todos os CTAs. A variável `NEXT_PUBLIC_WHATSAPP_NUMBER` é opcional e pode substituí-lo; o valor deve incluir `55`, DDD e telefone, somente com dígitos. Enquanto o domínio estiver ausente, o site usa `localhost` apenas para build e publica `robots` com bloqueio de indexação.
+Todos os CTAs abrem diretamente a conversa com o número oficial `5521980325724`, levando a mensagem correspondente já formatada. O domínio oficial é `https://www.jesuscleanhigienizacao.com.br`.
+
+## Publicação
+
+O projeto gera uma exportação estática do Next.js e publica automaticamente no GitHub Pages pelo workflow `.github/workflows/deploy-pages.yml` a cada push na `main`.
 
 ## Fontes centrais
 

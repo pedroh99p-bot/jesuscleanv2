@@ -318,9 +318,11 @@
   display: block;
   font-size: clamp(3.2rem, 6.5vw, 6.4rem);
   line-height: 1;
-  opacity: 0.18;
-  filter: saturate(0.55) brightness(0.72);
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  opacity: 0.38;
+  filter: saturate(0.88) brightness(0.98);
+  text-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18),
+    0 0 22px rgba(127, 228, 255, 0.1);
 }
 
 .infant-emoji--bear-one {
@@ -582,7 +584,7 @@
 
   .infant-section__emoji-cloud span {
     font-size: clamp(3rem, 16vw, 4.6rem);
-    opacity: 0.16;
+    opacity: 0.34;
   }
 
   .infant-emoji--baby {

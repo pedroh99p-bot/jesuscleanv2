@@ -1,9 +1,8 @@
-const defaultPhone = "5521980325724";
-const rawPhone =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") || defaultPhone;
-const phone = /^55\d{10,11}$/.test(rawPhone) ? rawPhone : null;
-const whatsappBase = phone ? `https://wa.me/${phone}` : "https://wa.me/";
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || null;
+const phone = "5521980325724";
+const whatsappBase = `https://wa.me/${phone}`;
+const officialSiteUrl = "https://www.jesuscleanhigienizacao.com.br";
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() || officialSiteUrl;
 const configuredInstagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() || null;
 
 export const business = {
@@ -13,12 +12,12 @@ export const business = {
   service:
     "Higienização profissional de estofados residenciais e comerciais no Rio de Janeiro.",
   publicSiteUrl: configuredSiteUrl,
-  siteUrl: configuredSiteUrl ?? "http://localhost:3000",
-  isPublicSiteConfigured: Boolean(configuredSiteUrl),
+  siteUrl: configuredSiteUrl,
+  isPublicSiteConfigured: true,
   phone,
-  whatsappConfigured: Boolean(phone),
+  whatsappConfigured: true,
   whatsappBase,
-  whatsappMode: phone ? "direct" : "share",
+  whatsappMode: "direct",
   whatsapp: {
     defaultMessage:
       "Olá, Jesus Clean! Gostaria de enviar fotos e solicitar um pré-orçamento de higienização.",

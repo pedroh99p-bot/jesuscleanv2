@@ -18,6 +18,8 @@ export function Hero() {
     let dispatched = false;
     let playbackRetry = 0;
     let playbackFrame = 0;
+    let playbackPulse = 0;
+    let pauseRetry = 0;
 
     const markReady = () => {
       if (dispatched) return;
@@ -53,9 +55,18 @@ export function Hero() {
       if (!document.hidden) startPlayback();
     };
 
+    const resumeAfterPause = () => {
+      if (document.hidden || video.ended) return;
+      if (pauseRetry) window.clearTimeout(pauseRetry);
+      pauseRetry = window.setTimeout(startPlayback, 120);
+    };
+
     startPlayback();
     playbackFrame = window.requestAnimationFrame(startPlayback);
     playbackRetry = window.setTimeout(startPlayback, 240);
+    playbackPulse = window.setInterval(() => {
+      if (!document.hidden && video.paused) startPlayback();
+    }, 700);
 
     if (video.readyState >= 2) {
       window.requestAnimationFrame(markReady);
@@ -68,19 +79,39 @@ export function Hero() {
     video.addEventListener("loadedmetadata", startPlayback);
     video.addEventListener("loadeddata", startPlayback);
     video.addEventListener("canplay", startPlayback);
+    video.addEventListener("pause", resumeAfterPause);
     window.addEventListener("pageshow", startPlayback);
+    window.addEventListener("focus", startPlayback);
+    window.addEventListener("online", startPlayback);
+    window.addEventListener("pointerdown", startPlayback, { once: true });
+    window.addEventListener("touchstart", startPlayback, {
+      once: true,
+      passive: true,
+    });
+    window.addEventListener("scroll", startPlayback, {
+      once: true,
+      passive: true,
+    });
     document.addEventListener("visibilitychange", resumeWhenVisible);
 
     return () => {
       if (playbackFrame) window.cancelAnimationFrame(playbackFrame);
       if (playbackRetry) window.clearTimeout(playbackRetry);
+      if (playbackPulse) window.clearInterval(playbackPulse);
+      if (pauseRetry) window.clearTimeout(pauseRetry);
       video.removeEventListener("loadeddata", markReady);
       video.removeEventListener("canplay", markReady);
       video.removeEventListener("error", markReady);
       video.removeEventListener("loadedmetadata", startPlayback);
       video.removeEventListener("loadeddata", startPlayback);
       video.removeEventListener("canplay", startPlayback);
+      video.removeEventListener("pause", resumeAfterPause);
       window.removeEventListener("pageshow", startPlayback);
+      window.removeEventListener("focus", startPlayback);
+      window.removeEventListener("online", startPlayback);
+      window.removeEventListener("pointerdown", startPlayback);
+      window.removeEventListener("touchstart", startPlayback);
+      window.removeEventListener("scroll", startPlayback);
       document.removeEventListener("visibilitychange", resumeWhenVisible);
     };
   }, []);
