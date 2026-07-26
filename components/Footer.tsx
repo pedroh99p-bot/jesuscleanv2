@@ -27,7 +27,7 @@ export function Footer() {
             />
             <div>
               <strong>{business.name}</strong>
-              <span>{business.instructor}</span>
+              <span>{business.role}</span>
             </div>
           </div>
           <p>{t.footer.description}</p>
@@ -43,15 +43,22 @@ export function Footer() {
               <MessageCircle aria-hidden="true" />
               {t.common.whatsapp}
             </WhatsAppButton>
-            <a
-              href={business.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="site-footer__social"
-            >
-              <Camera aria-hidden="true" />
-              {t.common.instagram}
-            </a>
+            {business.instagramUrl ? (
+              <a
+                href={business.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-footer__social"
+              >
+                <Camera aria-hidden="true" />
+                {business.instagramHandle}
+              </a>
+            ) : (
+              <span className="site-footer__social pending-link">
+                <Camera aria-hidden="true" />
+                {business.instagramHandle}
+              </span>
+            )}
           </div>
         </div>
 
@@ -68,9 +75,9 @@ export function Footer() {
           <h2>{t.footer.infoTitle}</h2>
           <span>
             <MapPin aria-hidden="true" />
-            {t.common.beach}
+            {t.common.neighborhood}
           </span>
-          <span>{t.common.neighborhood}</span>
+          <span>{t.common.beach}</span>
           <span>{t.common.reference}</span>
           <span>{t.footer.serviceLanguages}</span>
         </div>

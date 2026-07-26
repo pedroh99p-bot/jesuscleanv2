@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { business } from "@/data/business";
 import { useTranslations } from "@/i18n/useTranslations";
 
-const storageKey = "samurai-preloader-seen";
-const heroReadyEvent = "samurai:hero-ready";
+const storageKey = "jesusclean-preloader-seen";
+const heroReadyEvent = "jesusclean:hero-ready";
 const minimumVisibleMs = 820;
 const maximumVisibleMs = 1550;
 const curtainDurationMs = 560;

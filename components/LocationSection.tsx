@@ -1,21 +1,19 @@
 "use client";
 
-import { Compass, MapPin, Navigation, ShieldCheck } from "lucide-react";
-import { business } from "@/data/business";
+import { Compass, MapPin, Send, ShieldCheck } from "lucide-react";
 import { useTranslations } from "@/i18n/useTranslations";
-import { TrackedLink } from "./TrackedLink";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 export function LocationSection() {
   const { t } = useTranslations();
-  const hasMap = Boolean(business.location.mapEmbedSrc);
 
   return (
     <section
       className="location-section"
-      id="localizacao"
+      id="atendimento"
       aria-labelledby="location-title"
     >
+      <span className="anchor-sentinel" id="localizacao" aria-hidden="true" />
       <div className="section-shell location-section__layout">
         <div className="location-section__copy">
           <div className="location-section__heading">
@@ -36,20 +34,19 @@ export function LocationSection() {
           </div>
 
           <div className="location-section__actions">
-            <TrackedLink
-              className="route-link"
-              href={business.location.routeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              eventName="map_interaction"
-              payload={{ section: "localizacao", cta_id: "open-route" }}
-            >
-              <Navigation aria-hidden="true" />
-              {t.location.route}
-            </TrackedLink>
             <WhatsAppButton
               origin="location"
-              section="localizacao"
+              section="atendimento"
+              ctaId="location-send"
+              variant="soft"
+              message={t.location.whatsappMessage}
+            >
+              <Send aria-hidden="true" />
+              {t.location.route}
+            </WhatsAppButton>
+            <WhatsAppButton
+              origin="location"
+              section="atendimento"
               ctaId="location-whatsapp"
               message={t.location.whatsappMessage}
             >
@@ -58,22 +55,18 @@ export function LocationSection() {
           </div>
         </div>
 
-        <div className="location-map">
-          {hasMap ? (
-            <iframe
-              title={t.location.mapTitle}
-              src={business.location.mapEmbedSrc}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          ) : (
-            <div className="location-map__fallback">
-              <Compass aria-hidden="true" />
-              <h3>{t.location.mapPendingTitle}</h3>
-              <p>{t.location.mapPendingText}</p>
-            </div>
-          )}
+        <div className="location-map location-map--regions">
+          <div className="location-map__fallback">
+            <Compass aria-hidden="true" />
+            <h3>{t.location.mapPendingTitle}</h3>
+            <p>{t.location.mapPendingText}</p>
+            <strong>{t.location.regionsLabel}</strong>
+            <ul>
+              {t.location.regions.map((region) => (
+                <li key={region}>{region}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

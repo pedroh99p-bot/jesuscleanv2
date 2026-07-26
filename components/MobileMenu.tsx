@@ -42,9 +42,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
         <div className="mobile-menu__top">
           <Image
             src={business.assets.logo}
-            alt="Altinha com Samurai"
-            width={42}
-            height={42}
+            alt={business.name}
+            width={72}
+            height={72}
           />
           <button
             type="button"

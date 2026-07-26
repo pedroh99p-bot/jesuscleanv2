@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, ShieldCheck, Waves } from "lucide-react";
+import { Camera, MapPin, ShieldCheck, Waves } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { business } from "@/data/business";
 import { useTranslations } from "@/i18n/useTranslations";
@@ -9,11 +9,12 @@ import { WhatsAppButton } from "./WhatsAppButton";
 
 type AnimatedMetricProps = {
   value: number;
+  prefix: string;
   suffix: string;
   label: string;
 };
 
-function AnimatedMetric({ value, suffix, label }: AnimatedMetricProps) {
+function AnimatedMetric({ value, prefix, suffix, label }: AnimatedMetricProps) {
   const ref = useRef<HTMLElement>(null);
   const [displayValue, setDisplayValue] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -75,6 +76,7 @@ function AnimatedMetric({ value, suffix, label }: AnimatedMetricProps) {
   return (
     <article ref={ref} className="about__metric">
       <strong aria-label={`${value}${suffix} - ${label}`}>
+        {prefix ? <em aria-hidden="true">{prefix}</em> : null}
         <span aria-hidden="true">{displayValue}</span>
         {suffix ? <em aria-hidden="true">{suffix}</em> : null}
       </strong>
@@ -83,7 +85,7 @@ function AnimatedMetric({ value, suffix, label }: AnimatedMetricProps) {
   );
 }
 
-export function AboutSamurai() {
+export function SpecialistSection() {
   const { t } = useTranslations();
 
   return (
@@ -102,10 +104,10 @@ export function AboutSamurai() {
         <div className="about__visual">
           <div className="about__portrait">
             <Image
-              src={business.assets.samuraiPortrait}
+              src={business.assets.specialistPortrait}
               alt={t.specialist.imageAlt}
-              width={1209}
-              height={1301}
+              width={1122}
+              height={1402}
               sizes="(max-width: 900px) 100vw, 48vw"
               className="about__image"
             />
@@ -122,6 +124,7 @@ export function AboutSamurai() {
               <AnimatedMetric
                 key={metric.label}
                 value={metric.value}
+                prefix={metric.prefix}
                 suffix={metric.suffix}
                 label={metric.label}
               />
@@ -141,14 +144,32 @@ export function AboutSamurai() {
             })}
           </div>
 
-          <WhatsAppButton
-            origin="specialist"
-            section="especialista"
-            ctaId="specialist-whatsapp"
-            message={t.specialist.whatsappMessage}
-          >
-            {t.specialist.cta}
-          </WhatsAppButton>
+          <div className="about__actions">
+            <WhatsAppButton
+              origin="specialist"
+              section="especialista"
+              ctaId="specialist-whatsapp"
+              message={t.specialist.whatsappMessage}
+            >
+              {t.specialist.cta}
+            </WhatsAppButton>
+            {business.instagramUrl ? (
+              <a
+                className="secondary-link"
+                href={business.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Camera aria-hidden="true" />
+                {t.specialist.instagramCta}
+              </a>
+            ) : (
+              <span className="pending-link" aria-label="Instagram pendente">
+                <Camera aria-hidden="true" />
+                {business.instagramHandle}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </section>

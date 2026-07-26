@@ -1,13 +1,13 @@
 "use client";
 
-import { ArrowDown, BarChart3, MapPin, Smile, Waves } from "lucide-react";
+import { ArrowDown, BedDouble, MapPin, Sofa, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { business } from "@/data/business";
 import { useTranslations } from "@/i18n/useTranslations";
 import { WhatsAppButton } from "./WhatsAppButton";
 
-const benefitIcons = [Smile, BarChart3, Waves, MapPin] as const;
-const heroReadyEvent = "samurai:hero-ready";
+const benefitIcons = [Sparkles, Sofa, BedDouble, MapPin] as const;
+const heroReadyEvent = "jesusclean:hero-ready";
 
 export function Hero() {
   const { t } = useTranslations();
@@ -55,10 +55,10 @@ export function Hero() {
         loop
         playsInline
         preload="metadata"
-        poster={business.assets.communityImage}
+        poster={business.assets.heroPoster}
         aria-hidden="true"
       >
-        <source src={business.assets.heroVideo} type="video/webm" />
+        <source src={business.assets.heroVideo} type="video/mp4" />
       </video>
       <div className="hero__overlay" aria-hidden="true" />
       <div className="hero__content">
@@ -87,7 +87,7 @@ export function Hero() {
           </div>
           <ul className="hero__chips" aria-label={t.hero.chipsAria}>
             {t.hero.benefits.map((benefit, index) => {
-              const Icon = benefitIcons[index] ?? Waves;
+              const Icon = benefitIcons[index] ?? Sparkles;
               return (
                 <li key={benefit}>
                   <Icon aria-hidden="true" />

@@ -24,22 +24,22 @@ export function Header() {
 
   return (
     <header className={`site-header${scrolled ? " site-header--scrolled" : ""}`}>
-      <a className="brand" href="#top" aria-label="Altinha com Samurai">
+      <a className="brand" href="#top" aria-label={business.name}>
         <Image
           src={business.assets.logo}
           alt=""
-          width={46}
-          height={46}
+          width={72}
+          height={72}
           priority
         />
         <span>
-          <strong>Altinha</strong>
-          <small>com Samurai</small>
+          <strong>{t.common.brand}</strong>
+          <small>{t.common.brandSuffix}</small>
         </span>
       </a>
 
       <nav className="desktop-nav" aria-label={t.header.navAria}>
-        {navigation.map((item) => (
+        {navigation.filter((item) => item.desktop).map((item) => (
           <a key={item.href} href={item.href}>
             {t.navigation[item.key]}
           </a>

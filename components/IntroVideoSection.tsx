@@ -146,7 +146,7 @@ export function IntroVideoSection() {
               loop
               playsInline
               preload="metadata"
-              poster={business.assets.communityImage}
+              poster={business.assets.introPoster}
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
               onVolumeChange={syncAudioState}

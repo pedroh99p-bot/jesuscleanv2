@@ -4,13 +4,14 @@ import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import {
   CheckCircle2,
+  CalendarCheck,
   Clock3,
+  ClipboardCheck,
   Languages,
   MapPin,
   MessageCircle,
-  Shirt,
   Sparkles,
-  Sun,
+  Sofa,
   Waves,
 } from "lucide-react";
 import { useTranslations } from "@/i18n/useTranslations";
@@ -18,8 +19,8 @@ import { cx } from "@/lib/utils";
 import { ClassProfilesCarousel } from "./ClassProfilesCarousel";
 import { WhatsAppButton } from "./WhatsAppButton";
 
-const stepIcons = [MessageCircle, CheckCircle2, Sparkles, MapPin] as const;
-const factIcons = [Clock3, MapPin, Waves, Sun, Languages] as const;
+const stepIcons = [MessageCircle, ClipboardCheck, CalendarCheck, Sparkles] as const;
+const factIcons = [MessageCircle, MapPin, Sofa, Clock3, Languages] as const;
 
 export function PracticalExperienceSection() {
   const { t } = useTranslations();
@@ -105,7 +106,7 @@ export function PracticalExperienceSection() {
 
         <div className="practical__checklist">
           <div>
-            <Shirt aria-hidden="true" />
+            <ClipboardCheck aria-hidden="true" />
             <h3>{t.practical.checklistTitle}</h3>
           </div>
           <ul>
