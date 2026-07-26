@@ -37,7 +37,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=
 NEXT_PUBLIC_META_PIXEL_ID=
 ```
 
-O número deve incluir `55`, DDD e telefone, somente com dígitos. Enquanto ele estiver ausente, os CTAs de WhatsApp permanecem desabilitados. Enquanto o domínio estiver ausente, o site usa `localhost` apenas para build e publica `robots` com bloqueio de indexação.
+O número deve incluir `55`, DDD e telefone, somente com dígitos. Enquanto ele estiver ausente, os CTAs usam o compartilhamento do WhatsApp com a mensagem pronta; quando configurado, abrem diretamente a conversa com a Jesus Clean. Enquanto o domínio estiver ausente, o site usa `localhost` apenas para build e publica `robots` com bloqueio de indexação.
 
 ## Fontes centrais
 

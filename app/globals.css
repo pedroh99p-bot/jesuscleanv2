@@ -286,6 +286,9 @@
 }
 
 .infant-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(76px, 10vw, 132px) 0;
   background:
     radial-gradient(circle at 10% 20%, rgba(53, 198, 238, 0.18), transparent 28rem),
@@ -293,10 +296,91 @@
 }
 
 .infant-section__layout {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
   gap: clamp(34px, 7vw, 80px);
   align-items: center;
+}
+
+.infant-section__emoji-cloud {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.infant-section__emoji-cloud span {
+  position: absolute;
+  display: block;
+  font-size: clamp(3.2rem, 6.5vw, 6.4rem);
+  line-height: 1;
+  opacity: 0.18;
+  filter: saturate(0.55) brightness(0.72);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.infant-emoji--bear-one {
+  top: 8%;
+  left: 3%;
+  transform: rotate(-14deg);
+}
+
+.infant-emoji--bottle-one {
+  top: 10%;
+  right: 4%;
+  transform: rotate(16deg);
+}
+
+.infant-emoji--baby {
+  top: 4%;
+  left: 45%;
+  transform: rotate(7deg) scale(0.88);
+}
+
+.infant-emoji--puzzle {
+  right: 31%;
+  bottom: 7%;
+  transform: rotate(-12deg);
+}
+
+.infant-emoji--balloon {
+  right: 16%;
+  bottom: 4%;
+  transform: rotate(10deg) scale(0.82);
+}
+
+.infant-emoji--bath {
+  bottom: 20%;
+  left: 5%;
+  transform: rotate(8deg) scale(0.92);
+}
+
+.infant-emoji--bear-two {
+  right: 5%;
+  bottom: 30%;
+  transform: rotate(12deg) scale(0.72);
+}
+
+.infant-emoji--bottle-two {
+  bottom: 11%;
+  left: 54%;
+  transform: rotate(-18deg) scale(0.78);
+}
+
+.infant-emoji--soap {
+  top: 36%;
+  right: 43%;
+  transform: rotate(15deg) scale(0.72);
+}
+
+.infant-emoji--child {
+  top: 23%;
+  left: 24%;
+  transform: rotate(-8deg) scale(0.7);
 }
 
 .infant-section__copy > span {
@@ -494,6 +578,31 @@
 
   .infant-section__items {
     padding: 18px;
+  }
+
+  .infant-section__emoji-cloud span {
+    font-size: clamp(3rem, 16vw, 4.6rem);
+    opacity: 0.16;
+  }
+
+  .infant-emoji--baby {
+    top: 2%;
+    left: 56%;
+  }
+
+  .infant-emoji--child {
+    top: 29%;
+    left: 6%;
+  }
+
+  .infant-emoji--soap {
+    top: 47%;
+    right: 5%;
+  }
+
+  .infant-emoji--puzzle {
+    right: 52%;
+    bottom: 4%;
   }
 
   .brand img {
@@ -7597,25 +7706,25 @@ section[id] {
 @media (min-width: 1041px) {
   .hero h1 {
     max-width: 780px;
-    font-size: 4.35rem;
+    font-size: 4.05rem;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1040px) {
   .hero h1 {
-    font-size: clamp(2.9rem, 6vw, 3.65rem);
+    font-size: clamp(2.7rem, 5.5vw, 3.4rem);
   }
 }
 
 @media (max-width: 640px) {
   .hero h1 {
-    font-size: clamp(2.25rem, 10.5vw, 2.6rem);
+    font-size: clamp(2.1rem, 9.7vw, 2.4rem);
   }
 }
 
 @media (max-width: 370px) {
   .hero h1 {
-    font-size: clamp(2.12rem, 10.2vw, 2.28rem);
+    font-size: clamp(2rem, 9.7vw, 2.16rem);
   }
 }
 

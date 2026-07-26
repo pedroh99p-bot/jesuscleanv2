@@ -98,25 +98,6 @@ export function WhatsAppButton({
     </>
   );
 
-  if (!business.whatsappConfigured) {
-    return (
-      <button
-        type="button"
-        className={cx(
-          "wa-button",
-          `wa-button--${variant}`,
-          "wa-button--disabled",
-          className,
-        )}
-        disabled
-        aria-label={ariaLabel ?? "WhatsApp pendente de configuração"}
-        title="Número oficial de WhatsApp pendente"
-      >
-        {content}
-      </button>
-    );
-  }
-
   return (
     <a
       className={cx("wa-button", `wa-button--${variant}`, className)}

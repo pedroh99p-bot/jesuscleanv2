@@ -2,7 +2,7 @@
 
 ## Bloqueadores de publicação
 
-- **Número oficial de WhatsApp:** obrigatório em `NEXT_PUBLIC_WHATSAPP_NUMBER`, com `55 + DDD + número`. Sem ele, todos os CTAs permanecem desabilitados e nenhum link antigo é reutilizado.
+- **Número oficial de WhatsApp:** recomendado em `NEXT_PUBLIC_WHATSAPP_NUMBER`, com `55 + DDD + número`. Sem ele, os CTAs continuam funcionando pelo compartilhamento do WhatsApp, mas o visitante precisa escolher o contato; com o número, a conversa abre diretamente para a Jesus Clean.
 - **Domínio oficial:** obrigatório em `NEXT_PUBLIC_SITE_URL`. Sem ele, canonical e sitemap não devem ser publicados e o `robots` bloqueia indexação.
 
 ## Integrações e contato

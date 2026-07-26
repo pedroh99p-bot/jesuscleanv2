@@ -1,5 +1,6 @@
 const rawPhone = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(/\D/g, "") ?? "";
 const phone = /^55\d{10,11}$/.test(rawPhone) ? rawPhone : null;
+const whatsappBase = phone ? `https://wa.me/${phone}` : "https://wa.me/";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || null;
 const configuredInstagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() || null;
 
@@ -14,7 +15,8 @@ export const business = {
   isPublicSiteConfigured: Boolean(configuredSiteUrl),
   phone,
   whatsappConfigured: Boolean(phone),
-  whatsappBase: phone ? `https://wa.me/${phone}` : null,
+  whatsappBase,
+  whatsappMode: phone ? "direct" : "share",
   whatsapp: {
     defaultMessage:
       "Olá, Jesus Clean! Gostaria de enviar fotos e solicitar um pré-orçamento de higienização.",

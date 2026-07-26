@@ -16,6 +16,8 @@ export function Hero() {
   useEffect(() => {
     const video = videoRef.current;
     let dispatched = false;
+    let playbackRetry = 0;
+    let playbackFrame = 0;
 
     const markReady = () => {
       if (dispatched) return;
@@ -29,8 +31,13 @@ export function Hero() {
     }
 
     const startPlayback = () => {
+      video.autoplay = true;
+      video.loop = true;
+      video.playsInline = true;
       video.defaultMuted = true;
       video.muted = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
       void video.play().catch(() => {
         // O poster continua visível se o navegador bloquear autoplay.
       });
@@ -41,6 +48,8 @@ export function Hero() {
     };
 
     startPlayback();
+    playbackFrame = window.requestAnimationFrame(startPlayback);
+    playbackRetry = window.setTimeout(startPlayback, 240);
 
     if (video.readyState >= 2) {
       window.requestAnimationFrame(markReady);
@@ -51,15 +60,21 @@ export function Hero() {
     }
 
     video.addEventListener("loadedmetadata", startPlayback);
+    video.addEventListener("loadeddata", startPlayback);
     video.addEventListener("canplay", startPlayback);
+    window.addEventListener("pageshow", startPlayback);
     document.addEventListener("visibilitychange", resumeWhenVisible);
 
     return () => {
+      if (playbackFrame) window.cancelAnimationFrame(playbackFrame);
+      if (playbackRetry) window.clearTimeout(playbackRetry);
       video.removeEventListener("loadeddata", markReady);
       video.removeEventListener("canplay", markReady);
       video.removeEventListener("error", markReady);
       video.removeEventListener("loadedmetadata", startPlayback);
+      video.removeEventListener("loadeddata", startPlayback);
       video.removeEventListener("canplay", startPlayback);
+      window.removeEventListener("pageshow", startPlayback);
       document.removeEventListener("visibilitychange", resumeWhenVisible);
     };
   }, []);
